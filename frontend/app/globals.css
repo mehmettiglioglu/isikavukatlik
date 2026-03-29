@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-navy: #0f1e3c;
+  --color-navy-light: #1a2f5e;
+  --color-gold: #b8966e;
+  --color-gold-light: #d4b896;
+  --color-surface: #f8f8f6;
+  --font-serif: "Georgia", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
