@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: 'export',
   // Rewrite: API çağrılarını .NET backend'e yönlendir
   async rewrites() {
     return [
