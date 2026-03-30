@@ -3,9 +3,13 @@ node_modules/
 .pnp
 .pnp.js
 
-# Next.js build output
+# Build output
 frontend/.next/
 frontend/out/
+frontend/dist/
+
+# Claude Code
+.claude/
 
 # Environment variables (never commit secrets)
 frontend/.env.local

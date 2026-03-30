@@ -33,10 +33,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 builder.Services.AddScoped<TokenService>();
 
-// --- CORS (Next.js dev/prod) ---
+// --- CORS (Frontend dev/prod) ---
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("NextJsPolicy", policy =>
+    options.AddPolicy("FrontendPolicy", policy =>
     {
         policy
             .WithOrigins(
@@ -89,7 +89,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("NextJsPolicy");
+app.UseCors("FrontendPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
