@@ -7,7 +7,8 @@ const LINKS = [
   { to: "/", label: "Ana Sayfa" },
   { to: "/hakkimizda", label: "Hakkımızda" },
   { to: "/calisma-alanlari", label: "Çalışma Alanları" },
-  { to: "/blog", label: "Yazılar" },
+  { to: "/hesaplamalar", label: "Hesaplamalar" },
+  { to: "/blog", label: "Makaleler" },
   { to: "/iletisim", label: "İletişim" },
 ];
 

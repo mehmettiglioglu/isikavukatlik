@@ -71,6 +71,19 @@ export async function adminDeleteArticle(token: string, id: number) {
   });
 }
 
+export async function sendContactMessage(data: {
+  name: string;
+  email: string;
+  phone?: string;
+  subject: string;
+  message: string;
+}): Promise<{ success: boolean }> {
+  return fetchApi("/contact", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+}
+
 export async function login(username: string, password: string) {
   return fetchApi<{ token: string; username: string; role: string; expiresAt: string }>("/auth/login", {
     method: "POST",

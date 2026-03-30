@@ -10,14 +10,14 @@ export default function HakkimizdaPage() {
       university: "Çankaya Üniversitesi Hukuk Fakültesi",
       since: "2014",
       description:
-        "2014 yılından bu yana Konya'da serbest avukatlık yapmaktadır. İş hukuku, ticaret hukuku ve icra-iflas hukuku alanlarında yoğunlaşmaktadır.",
+        "2014 yılından bu yana Konya'da serbest avukatlık yapmaktadır.",
     },
     {
       name: "Av. Havva Nur IŞIK",
       university: "Ankara Üniversitesi Hukuk Fakültesi",
       since: "2018",
       description:
-        "2018 yılından bu yana Konya'da serbest avukatlık yapmaktadır. Aile hukuku, gayrimenkul hukuku ve tüketici hukuku alanlarında yoğunlaşmaktadır.",
+        "2018 yılından bu yana Konya'da serbest avukatlık yapmaktadır.",
     },
   ];
 

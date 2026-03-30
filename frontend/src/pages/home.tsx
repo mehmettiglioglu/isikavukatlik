@@ -6,6 +6,7 @@ import type { ArticleListItem } from "@/lib/types";
 import HeroSection from "@/components/home/HeroSection";
 import PracticeAreas from "@/components/home/PracticeAreas";
 import LatestArticles from "@/components/home/LatestArticles";
+import ContactSection from "@/components/home/ContactSection";
 import LegalServiceJsonLd from "@/components/seo/LegalServiceJsonLd";
 import PageHead from "@/components/seo/PageHead";
 
@@ -30,6 +31,7 @@ export default function HomePage() {
       <LegalServiceJsonLd />
       <HeroSection />
       <PracticeAreas areas={PRACTICE_AREAS} />
+      <ContactSection />
       <LatestArticles articles={articles} />
     </>
   );

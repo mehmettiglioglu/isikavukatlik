@@ -11,6 +11,7 @@ const CalismaAlaniDetay = lazy(() => import("../pages/calisma-alani-detay"));
 const Blog = lazy(() => import("../pages/blog"));
 const BlogDetay = lazy(() => import("../pages/blog-detay"));
 const Iletisim = lazy(() => import("../pages/iletisim"));
+const Hesaplamalar = lazy(() => import("../pages/hesaplamalar"));
 const NotFound = lazy(() => import("../pages/not-found"));
 const ErrorPage = lazy(() => import("../pages/error-page"));
 
@@ -34,6 +35,7 @@ export const router = createBrowserRouter([
       { path: "calisma-alanlari/:slug", element: <CalismaAlaniDetay /> },
       { path: "blog", element: <Blog /> },
       { path: "blog/:slug", element: <BlogDetay /> },
+      { path: "hesaplamalar", element: <Hesaplamalar /> },
       { path: "iletisim", element: <Iletisim /> },
       { path: "*", element: <NotFound /> },
     ],
