@@ -12,7 +12,7 @@ const LINKS = [
   { to: "/iletisim", label: "İletişim" },
 ];
 
-export default function Navigation() {
+export default function Navigation({ transparent }: { transparent?: boolean }) {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
 
@@ -26,10 +26,15 @@ export default function Navigation() {
               to={to}
               aria-current={pathname === to ? "page" : undefined}
               className={clsx(
-                "text-sm transition-colors",
+                "text-sm transition-colors duration-300",
                 pathname === to
-                  ? "text-navy font-medium relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-gold"
-                  : "text-gray-500 hover:text-navy"
+                  ? clsx(
+                      "font-medium relative after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-gold",
+                      transparent ? "text-white" : "text-navy"
+                    )
+                  : transparent
+                    ? "text-white/70 hover:text-white"
+                    : "text-gray-500 hover:text-navy"
               )}
             >
               {label}
@@ -39,7 +44,12 @@ export default function Navigation() {
         <li>
           <Link
             to="/iletisim"
-            className="border border-navy bg-navy px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition-opacity hover:opacity-85"
+            className={clsx(
+              "px-4 py-2 text-xs font-medium uppercase tracking-wider transition-all duration-300 border",
+              transparent
+                ? "border-white/30 bg-white/10 text-white hover:bg-white/20"
+                : "border-navy bg-navy text-white hover:opacity-85"
+            )}
           >
             Randevu Al
           </Link>
@@ -48,7 +58,10 @@ export default function Navigation() {
 
       {/* Mobile toggle */}
       <button
-        className="flex items-center justify-center md:hidden text-navy"
+        className={clsx(
+          "flex items-center justify-center md:hidden transition-colors duration-300",
+          transparent ? "text-white" : "text-navy"
+        )}
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label="Menüyü aç/kapat"
