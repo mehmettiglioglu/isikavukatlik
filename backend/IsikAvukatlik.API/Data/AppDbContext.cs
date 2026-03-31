@@ -12,6 +12,7 @@ public class AppDbContext : DbContext
     public DbSet<User> Users => Set<User>();
     public DbSet<CaseFile> CaseFiles => Set<CaseFile>();
     public DbSet<ContactMessage> ContactMessages => Set<ContactMessage>();
+    public DbSet<LegalTerm> LegalTerms => Set<LegalTerm>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -31,6 +32,14 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Category>(entity =>
         {
             entity.HasIndex(c => c.Slug).IsUnique();
+        });
+
+        // LegalTerm
+        modelBuilder.Entity<LegalTerm>(entity =>
+        {
+            entity.HasIndex(t => t.Slug).IsUnique();
+            entity.HasIndex(t => t.Letter);
+            entity.HasIndex(t => t.Category);
         });
 
         // User

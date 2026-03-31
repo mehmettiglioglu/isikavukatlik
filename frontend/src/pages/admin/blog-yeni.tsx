@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Save, Eye, EyeOff, ImageIcon, AlertCircle, CheckCircle } from "lucide-react";
-import { getCategories, adminCreateArticle } from "@/lib/api";
+import { ArrowLeft, Save, EyeOff, AlertCircle, CheckCircle, Upload, X } from "lucide-react";
+import { getCategories, adminCreateArticle, adminUploadImage } from "@/lib/api";
 import { getAdminToken } from "@/lib/auth";
 import type { Category } from "@/lib/types";
+import RichEditor from "@/components/admin/RichEditor";
 
 function slugify(text: string) {
   return text.toLowerCase()
@@ -25,7 +26,7 @@ export default function YeniMakalePage() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
-  const [previewImage, setPreviewImage] = useState(false);
+  const [uploadingCover, setUploadingCover] = useState(false);
 
   useEffect(() => {
     const token = getAdminToken();
@@ -36,6 +37,23 @@ export default function YeniMakalePage() {
   function handleTitle(e: React.ChangeEvent<HTMLInputElement>) {
     const title = e.target.value;
     setForm((p) => ({ ...p, title, slug: slugify(title), metaTitle: p.metaTitle || title }));
+  }
+
+  async function handleCoverUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    e.target.value = "";
+    const token = getAdminToken();
+    if (!token) return;
+    setUploadingCover(true);
+    try {
+      const { url } = await adminUploadImage(token, file);
+      setForm((p) => ({ ...p, coverImageUrl: url }));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Görsel yüklenemedi.");
+    } finally {
+      setUploadingCover(false);
+    }
   }
 
   async function handleSubmit(publish: boolean) {
@@ -117,8 +135,12 @@ export default function YeniMakalePage() {
               <textarea rows={2} value={form.summary} onChange={(e) => setForm((p) => ({ ...p, summary: e.target.value }))} className={FIELD} placeholder="Kısa özet (liste görünümünde gösterilir)" />
             </div>
             <div>
-              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">İçerik (HTML) <span className="text-red-400">*</span></label>
-              <textarea rows={16} required value={form.content} onChange={(e) => setForm((p) => ({ ...p, content: e.target.value }))} className={`${FIELD} font-mono text-xs leading-relaxed`} placeholder="<h2>Başlık</h2><p>İçerik buraya...</p>" />
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">İçerik <span className="text-red-400">*</span></label>
+              <RichEditor
+                value={form.content}
+                onChange={(html) => setForm((p) => ({ ...p, content: html }))}
+                placeholder="Makale içeriğini buraya yazın..."
+              />
             </div>
           </div>
           <div className="border border-gray-200 bg-white p-6 space-y-4">
@@ -167,18 +189,25 @@ export default function YeniMakalePage() {
 
           <div className="border border-gray-200 bg-white p-5">
             <h2 className="mb-3 text-xs font-medium uppercase tracking-wider text-gray-400">Kapak Fotoğrafı</h2>
-            <input type="url" placeholder="https://..." value={form.coverImageUrl} onChange={(e) => setForm((p) => ({ ...p, coverImageUrl: e.target.value }))} className={FIELD} />
-            {form.coverImageUrl && (
-              <div className="mt-3">
-                <button type="button" onClick={() => setPreviewImage(!previewImage)} className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-navy">
-                  <ImageIcon size={12} /> {previewImage ? "Önizlemeyi gizle" : "Önizle"}
-                </button>
-                {previewImage && (
-                  <div className="relative mt-2 aspect-video overflow-hidden border border-gray-100">
-                    <img src={form.coverImageUrl} alt="Kapak önizleme" className="absolute inset-0 h-full w-full object-cover" onError={() => setPreviewImage(false)} />
-                  </div>
-                )}
+            {form.coverImageUrl ? (
+              <div>
+                <div className="relative aspect-video overflow-hidden border border-gray-100">
+                  <img src={form.coverImageUrl} alt="Kapak" className="absolute inset-0 h-full w-full object-cover" />
+                  <button type="button" onClick={() => setForm((p) => ({ ...p, coverImageUrl: "" }))} className="absolute top-2 right-2 flex h-6 w-6 items-center justify-center bg-black/50 text-white hover:bg-black/70">
+                    <X size={12} />
+                  </button>
+                </div>
               </div>
+            ) : (
+              <label className={`flex cursor-pointer flex-col items-center justify-center gap-2 border-2 border-dashed border-gray-200 bg-gray-50 py-8 text-center transition-colors hover:border-navy/40 ${uploadingCover ? "opacity-60 pointer-events-none" : ""}`}>
+                {uploadingCover
+                  ? <span className="h-5 w-5 animate-spin rounded-full border-2 border-navy/20 border-t-navy" />
+                  : <Upload size={20} className="text-gray-400" />
+                }
+                <span className="text-xs text-gray-400">{uploadingCover ? "Yükleniyor..." : "Tıkla veya sürükle"}</span>
+                <span className="text-[10px] text-gray-300">JPG, PNG, WebP · maks. 5 MB</span>
+                <input type="file" accept="image/*" className="hidden" onChange={handleCoverUpload} disabled={uploadingCover} />
+              </label>
             )}
           </div>
         </div>

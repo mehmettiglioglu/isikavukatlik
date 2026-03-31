@@ -1,7 +1,7 @@
 import { AlertTriangle } from "lucide-react";
 import type { ReactNode } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
-import { tr } from "date-fns/locale/tr";
+import { tr } from "date-fns/locale";
 import "react-datepicker/dist/react-datepicker.css";
 
 registerLocale("tr", tr);

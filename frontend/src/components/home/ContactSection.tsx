@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, Send, CheckCircle, AlertCircle, MapPin } from "lucide-react";
+import { Phone, Mail, Send, CheckCircle, AlertCircle, MapPin, User, MessageSquare, Tag } from "lucide-react";
+import clsx from "clsx";
 import { fadeUp, staggerContainer } from "@/components/ui/MotionDiv";
 import { sendContactMessage } from "@/lib/api";
 
@@ -69,7 +70,7 @@ export default function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-[1fr_380px]">
+        <div className="grid gap-8 lg:grid-cols-[1fr_360px]">
           {/* Form */}
           <motion.div
             initial="hidden"
@@ -100,10 +101,11 @@ export default function ContactSection() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-0">
-                {/* Ad + Telefon */}
-                <div className="grid gap-px sm:grid-cols-2">
-                  <Field
+              <form onSubmit={handleSubmit} noValidate className="space-y-4">
+                {/* Ad Soyad + Telefon */}
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <FloatField
+                    icon={<User size={16} />}
                     label="Ad Soyad"
                     required
                     id="f-name"
@@ -112,9 +114,9 @@ export default function ContactSection() {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="Adınız Soyadınız"
-                    position="top-left"
                   />
-                  <Field
+                  <FloatField
+                    icon={<Phone size={16} />}
                     label="Telefon"
                     id="f-phone"
                     name="phone"
@@ -122,13 +124,13 @@ export default function ContactSection() {
                     value={form.phone}
                     onChange={handleChange}
                     placeholder="0500 000 00 00"
-                    position="top-right"
                   />
                 </div>
 
                 {/* E-posta + Konu */}
-                <div className="grid gap-px sm:grid-cols-2">
-                  <Field
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <FloatField
+                    icon={<Mail size={16} />}
                     label="E-posta"
                     required
                     id="f-email"
@@ -137,58 +139,40 @@ export default function ContactSection() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="ornek@mail.com"
-                    position="mid-left"
                   />
-                  <div className="relative border border-gray-200 bg-white px-5 pt-5 pb-3 focus-within:border-gold/60 focus-within:ring-1 focus-within:ring-gold/20 transition-all">
-                    <label htmlFor="f-subject" className="block text-[10px] uppercase tracking-[0.18em] text-gray-400">
-                      Konu <span className="text-gold">*</span>
-                    </label>
-                    <select
-                      id="f-subject"
-                      name="subject"
-                      required
-                      value={form.subject}
-                      onChange={handleChange}
-                      className="mt-1.5 w-full appearance-none bg-transparent text-sm text-navy outline-none placeholder-gray-300"
-                    >
-                      <option value="" disabled>Seçiniz</option>
-                      {SUBJECTS.map((s) => (
-                        <option key={s} value={s}>{s}</option>
-                      ))}
-                    </select>
-                    <div aria-hidden="true" className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-gray-400">
-                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                        <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
+                  <SelectField
+                    icon={<Tag size={16} />}
+                    label="Konu"
+                    required
+                    id="f-subject"
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    options={SUBJECTS}
+                  />
                 </div>
 
                 {/* Mesaj */}
-                <div className="relative border border-gray-200 bg-white px-5 pt-5 pb-3 focus-within:border-gold/60 focus-within:ring-1 focus-within:ring-gold/20 transition-all">
-                  <label htmlFor="f-message" className="block text-[10px] uppercase tracking-[0.18em] text-gray-400">
-                    Mesaj <span className="text-gold">*</span>
-                  </label>
-                  <textarea
-                    id="f-message"
-                    name="message"
-                    required
-                    rows={5}
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Hukuki durumunuzu kısaca açıklayınız..."
-                    className="mt-1.5 w-full resize-none bg-transparent text-sm text-navy outline-none placeholder-gray-300"
-                  />
-                </div>
+                <TextareaField
+                  icon={<MessageSquare size={16} />}
+                  label="Mesajınız"
+                  required
+                  id="f-message"
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Hukuki durumunuzu kısaca açıklayınız..."
+                  rows={5}
+                />
 
                 {state === "error" && (
-                  <div className="flex items-center gap-2 pt-3 text-sm text-red-500">
+                  <div className="flex items-center gap-2 text-sm text-red-500">
                     <AlertCircle size={14} />
                     Bir hata oluştu. Lütfen tekrar deneyin.
                   </div>
                 )}
 
-                <div className="pt-4">
+                <div className="pt-2">
                   <button
                     type="submit"
                     disabled={state === "submitting"}
@@ -257,23 +241,75 @@ export default function ContactSection() {
   );
 }
 
-// Input field bileşeni
-type Position = "top-left" | "top-right" | "mid-left" | "mid-right";
+// ─── Ortak input sarmalayıcı stilleri ─────────────────────────────────────────
 
-function Field({
-  label, required, id, name, type, value, onChange, placeholder, position,
-}: {
-  label: string; required?: boolean; id: string; name: string; type: string;
-  value: string; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string; position: Position;
-}) {
-  // Bitişik kenarlar arasında gap kullanıldığından sadece border yönetimi
-  void position;
+type BaseProps = {
+  icon: React.ReactNode;
+  label: string;
+  required?: boolean;
+  id: string;
+  name: string;
+  value: string;
+};
+
+function FieldWrapper({
+  icon,
+  label,
+  required,
+  id,
+  focused,
+  hasValue,
+  children,
+}: BaseProps & { focused: boolean; hasValue: boolean; children: React.ReactNode }) {
   return (
-    <div className="relative border border-gray-200 bg-white px-5 pt-5 pb-3 focus-within:border-gold/60 focus-within:ring-1 focus-within:ring-gold/20 transition-all">
-      <label htmlFor={id} className="block text-[10px] uppercase tracking-[0.18em] text-gray-400">
-        {label} {required && <span className="text-gold">*</span>}
-      </label>
+    <div
+      className={clsx(
+        "relative flex items-start gap-3 rounded-none border bg-white px-4 pt-3 pb-3 transition-all duration-150",
+        focused ? "border-gold/70 ring-2 ring-gold/15 shadow-sm" : "border-gray-200 hover:border-gray-300"
+      )}
+    >
+      {/* İkon */}
+      <span
+        className={clsx(
+          "mt-4.5 shrink-0 transition-colors",
+          focused || hasValue ? "text-gold" : "text-gray-300"
+        )}
+      >
+        {icon}
+      </span>
+
+      <div className="flex-1 min-w-0">
+        {/* Floating label */}
+        <label
+          htmlFor={id}
+          className={clsx(
+            "pointer-events-none block font-medium transition-all duration-150",
+            focused || hasValue
+              ? "translate-y-0 text-[10px] uppercase tracking-[0.16em] text-gold"
+              : "translate-y-2 text-sm text-gray-400"
+          )}
+        >
+          {label}
+          {required && <span className="ml-0.5 text-gold">*</span>}
+        </label>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+// ─── Text input ────────────────────────────────────────────────────────────────
+
+function FloatField({
+  icon, label, required, id, name, type, value, onChange, placeholder,
+}: BaseProps & {
+  type: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
+}) {
+  const [focused, setFocused] = useState(false);
+  return (
+    <FieldWrapper icon={icon} label={label} required={required} id={id} name={name} value={value} focused={focused} hasValue={!!value}>
       <input
         id={id}
         name={name}
@@ -281,9 +317,76 @@ function Field({
         required={required}
         value={value}
         onChange={onChange}
-        placeholder={placeholder}
-        className="mt-1.5 w-full bg-transparent text-sm text-navy outline-none placeholder-gray-300"
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        placeholder={focused ? placeholder : ""}
+        className="mt-0.5 w-full bg-transparent text-base text-navy outline-none placeholder-gray-300"
       />
-    </div>
+    </FieldWrapper>
+  );
+}
+
+// ─── Select ────────────────────────────────────────────────────────────────────
+
+function SelectField({
+  icon, label, required, id, name, value, onChange, options,
+}: BaseProps & {
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  options: string[];
+}) {
+  const [focused, setFocused] = useState(false);
+  return (
+    <FieldWrapper icon={icon} label={label} required={required} id={id} name={name} value={value} focused={focused} hasValue={!!value}>
+      <div className="relative">
+        <select
+          id={id}
+          name={name}
+          required={required}
+          value={value}
+          onChange={onChange}
+          onFocus={() => setFocused(true)}
+          onBlur={() => setFocused(false)}
+          className="mt-0.5 w-full appearance-none bg-transparent text-base text-navy outline-none"
+        >
+          <option value="" disabled />
+          {options.map((s) => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
+        <div aria-hidden="true" className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 text-gray-400">
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </FieldWrapper>
+  );
+}
+
+// ─── Textarea ──────────────────────────────────────────────────────────────────
+
+function TextareaField({
+  icon, label, required, id, name, value, onChange, placeholder, rows,
+}: BaseProps & {
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  placeholder: string;
+  rows: number;
+}) {
+  const [focused, setFocused] = useState(false);
+  return (
+    <FieldWrapper icon={icon} label={label} required={required} id={id} name={name} value={value} focused={focused} hasValue={!!value}>
+      <textarea
+        id={id}
+        name={name}
+        required={required}
+        rows={rows}
+        value={value}
+        onChange={onChange}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
+        placeholder={focused ? placeholder : ""}
+        className="mt-0.5 w-full resize-none bg-transparent text-base text-navy outline-none placeholder-gray-300"
+      />
+    </FieldWrapper>
   );
 }

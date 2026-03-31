@@ -15,11 +15,14 @@ const Hesaplamalar = lazy(() => import("../pages/hesaplamalar"));
 const HesaplamaDetay = lazy(() => import("../pages/hesaplama-detay"));
 const NotFound = lazy(() => import("../pages/not-found"));
 const ErrorPage = lazy(() => import("../pages/error-page"));
+const Sozluk = lazy(() => import("../pages/sozluk"));
+const SozlukDetay = lazy(() => import("../pages/sozluk-detay"));
 
 const AdminLogin = lazy(() => import("../pages/admin/login"));
 const AdminBlogList = lazy(() => import("../pages/admin/blog-list"));
 const AdminBlogYeni = lazy(() => import("../pages/admin/blog-yeni"));
 const AdminDosyalar = lazy(() => import("../pages/admin/dosyalar"));
+const AdminMesajlar = lazy(() => import("../pages/admin/mesajlar"));
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +42,8 @@ export const router = createBrowserRouter([
       { path: "hesaplamalar", element: <Hesaplamalar /> },
       { path: "hesaplamalar/:slug", element: <HesaplamaDetay /> },
       { path: "iletisim", element: <Iletisim /> },
+      { path: "sozluk", element: <Sozluk /> },
+      { path: "sozluk/:slug", element: <SozlukDetay /> },
       { path: "*", element: <NotFound /> },
     ],
   },
@@ -60,6 +65,7 @@ export const router = createBrowserRouter([
           { index: true, element: <Navigate to="blog" replace /> },
           { path: "blog", element: <AdminBlogList /> },
           { path: "blog/yeni", element: <AdminBlogYeni /> },
+          { path: "mesajlar", element: <AdminMesajlar /> },
           { path: "dosyalar", element: <AdminDosyalar /> },
         ],
       },

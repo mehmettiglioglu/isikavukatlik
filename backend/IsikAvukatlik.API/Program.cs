@@ -75,11 +75,45 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// --- Otomatik Migration ---
+// --- Otomatik Migration / Tablo Oluşturma ---
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    await db.Database.MigrateAsync();
+    // Migration dosyası yoksa EnsureCreated ile tüm tablolar oluşturulur
+    await db.Database.EnsureCreatedAsync();
+
+    // ContactMessages tablosu yoksa manuel oluştur (schema güncellemeleri için)
+    await db.Database.ExecuteSqlRawAsync("""
+        CREATE TABLE IF NOT EXISTS "ContactMessages" (
+            "Id" SERIAL PRIMARY KEY,
+            "Name" TEXT NOT NULL DEFAULT '',
+            "Email" TEXT NOT NULL DEFAULT '',
+            "Phone" TEXT NULL,
+            "Subject" TEXT NOT NULL DEFAULT '',
+            "Message" TEXT NOT NULL DEFAULT '',
+            "CreatedAt" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+            "IsRead" BOOLEAN NOT NULL DEFAULT FALSE
+        );
+    """);
+
+    // LegalTerms tablosu yoksa oluştur
+    await db.Database.ExecuteSqlRawAsync("""
+        CREATE TABLE IF NOT EXISTS "LegalTerms" (
+            "Id" SERIAL PRIMARY KEY,
+            "Title" VARCHAR(300) NOT NULL DEFAULT '',
+            "Slug" VARCHAR(350) NOT NULL DEFAULT '',
+            "Letter" VARCHAR(1) NOT NULL DEFAULT '',
+            "Category" VARCHAR(200) NOT NULL DEFAULT '',
+            "Definition" TEXT NOT NULL DEFAULT '',
+            "ShortDescription" VARCHAR(500) NULL,
+            "IsPublished" BOOLEAN NOT NULL DEFAULT TRUE,
+            "CreatedAt" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+            "UpdatedAt" TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        );
+        CREATE UNIQUE INDEX IF NOT EXISTS "IX_LegalTerms_Slug" ON "LegalTerms" ("Slug");
+        CREATE INDEX IF NOT EXISTS "IX_LegalTerms_Letter" ON "LegalTerms" ("Letter");
+        CREATE INDEX IF NOT EXISTS "IX_LegalTerms_Category" ON "LegalTerms" ("Category");
+    """);
 }
 
 if (app.Environment.IsDevelopment())
@@ -90,6 +124,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors("FrontendPolicy");
+app.UseStaticFiles(); // wwwroot/uploads için
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

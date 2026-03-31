@@ -37,3 +37,30 @@ export interface PracticeArea {
   description: string;
   icon: string; // lucide-react icon name
 }
+
+export interface LegalTermListItem {
+  id: number;
+  title: string;
+  slug: string;
+  letter: string;
+  category: string;
+  shortDescription: string | null;
+}
+
+export interface LegalTermDetail {
+  id: number;
+  title: string;
+  slug: string;
+  letter: string;
+  category: string;
+  definition: string;
+  shortDescription: string | null;
+  updatedAt: string;
+  relatedArticles: {
+    title: string;
+    slug: string;
+    summary: string | null;
+    categoryName: string;
+    publishedAt: string | null;
+  }[];
+}

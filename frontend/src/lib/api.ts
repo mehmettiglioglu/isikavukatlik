@@ -1,4 +1,4 @@
-import type { ArticleDetail, ArticleListItem, Category, PaginatedResponse } from "./types";
+import type { ArticleDetail, ArticleListItem, Category, LegalTermDetail, LegalTermListItem, PaginatedResponse } from "./types";
 
 const API_BASE = import.meta.env.VITE_API_URL ?? "http://localhost:5000/api";
 
@@ -84,9 +84,56 @@ export async function sendContactMessage(data: {
   });
 }
 
+export async function getLegalTerms(): Promise<LegalTermListItem[]> {
+  return fetchApi("/legalterms");
+}
+
+export async function getLegalTermBySlug(slug: string): Promise<LegalTermDetail> {
+  return fetchApi(`/legalterms/${slug}`);
+}
+
 export async function login(username: string, password: string) {
   return fetchApi<{ token: string; username: string; role: string; expiresAt: string }>("/auth/login", {
     method: "POST",
     body: JSON.stringify({ username, password }),
   });
+}
+
+export async function adminGetMessages(token: string) {
+  return fetchApi<ContactMessage[]>("/contact", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+}
+
+export async function adminUploadImage(token: string, file: File): Promise<{ url: string }> {
+  const form = new FormData();
+  form.append("file", file);
+  const res = await fetch(`${API_BASE}/upload/image`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}` },
+    body: form,
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}));
+    throw new Error((err as { error?: string }).error ?? "Yükleme başarısız.");
+  }
+  return res.json();
+}
+
+export async function adminMarkMessageRead(token: string, id: number) {
+  return fetchApi<void>(`/contact/${id}/read`, {
+    method: "PATCH",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+}
+
+export interface ContactMessage {
+  id: number;
+  name: string;
+  email: string;
+  phone: string | null;
+  subject: string;
+  message: string;
+  createdAt: string;
+  isRead: boolean;
 }
