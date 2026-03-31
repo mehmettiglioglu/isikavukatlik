@@ -61,11 +61,11 @@ export default function CalcShell({ title, description, children, result, discla
 
 // ─── Input ───────────────────────────────────────────────────────────────────
 export function CalcInput({
-  label, id, type = "text", value, onChange, placeholder, suffix, min, step,
+  label, id, type = "text", value, onChange, placeholder, suffix, min, max, step,
 }: {
   label: string; id: string; type?: string; value: string | number;
   onChange: (v: string) => void; placeholder?: string; suffix?: string;
-  min?: string; step?: string;
+  min?: string; max?: string; step?: string;
 }) {
   return (
     <div className="group relative">
@@ -78,6 +78,7 @@ export function CalcInput({
           type={type}
           value={value}
           min={min}
+          max={max}
           step={step}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}

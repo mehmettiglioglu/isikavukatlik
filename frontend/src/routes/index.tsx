@@ -12,6 +12,7 @@ const Blog = lazy(() => import("../pages/blog"));
 const BlogDetay = lazy(() => import("../pages/blog-detay"));
 const Iletisim = lazy(() => import("../pages/iletisim"));
 const Hesaplamalar = lazy(() => import("../pages/hesaplamalar"));
+const HesaplamaDetay = lazy(() => import("../pages/hesaplama-detay"));
 const NotFound = lazy(() => import("../pages/not-found"));
 const ErrorPage = lazy(() => import("../pages/error-page"));
 
@@ -36,6 +37,7 @@ export const router = createBrowserRouter([
       { path: "blog", element: <Blog /> },
       { path: "blog/:slug", element: <BlogDetay /> },
       { path: "hesaplamalar", element: <Hesaplamalar /> },
+      { path: "hesaplamalar/:slug", element: <HesaplamaDetay /> },
       { path: "iletisim", element: <Iletisim /> },
       { path: "*", element: <NotFound /> },
     ],
