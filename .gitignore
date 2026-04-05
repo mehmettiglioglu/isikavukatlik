@@ -20,6 +20,9 @@ backend/appsettings.Development.json
 backend/*/bin/
 backend/*/obj/
 
+# Uploaded files
+backend/IsikAvukatlik.API/wwwroot/uploads/
+
 # OS
 .DS_Store
 Thumbs.db
