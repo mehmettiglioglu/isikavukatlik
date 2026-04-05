@@ -21,6 +21,7 @@ const SozlukDetay = lazy(() => import("../pages/sozluk-detay"));
 const AdminLogin = lazy(() => import("../pages/admin/login"));
 const AdminBlogList = lazy(() => import("../pages/admin/blog-list"));
 const AdminBlogYeni = lazy(() => import("../pages/admin/blog-yeni"));
+const AdminBlogDuzenle = lazy(() => import("../pages/admin/blog-duzenle"));
 const AdminDosyalar = lazy(() => import("../pages/admin/dosyalar"));
 const AdminMesajlar = lazy(() => import("../pages/admin/mesajlar"));
 
@@ -65,6 +66,7 @@ export const router = createBrowserRouter([
           { index: true, element: <Navigate to="blog" replace /> },
           { path: "blog", element: <AdminBlogList /> },
           { path: "blog/yeni", element: <AdminBlogYeni /> },
+          { path: "blog/:id/duzenle", element: <AdminBlogDuzenle /> },
           { path: "mesajlar", element: <AdminMesajlar /> },
           { path: "dosyalar", element: <AdminDosyalar /> },
         ],

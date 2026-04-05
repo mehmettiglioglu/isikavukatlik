@@ -76,6 +76,27 @@ public class ArticlesController : ControllerBase
         return article is null ? NotFound() : Ok(article);
     }
 
+    // ADMIN — Tek makale ID ile (JWT gerektirir)
+    [Authorize(Roles = "Admin")]
+    [HttpGet("admin/{id:int}")]
+    public async Task<IActionResult> GetByIdAdmin(int id)
+    {
+        var article = await _db.Articles
+            .Include(a => a.Category)
+            .Where(a => a.Id == id)
+            .Select(a => new
+            {
+                a.Id, a.Title, a.Slug, a.Summary, a.Content,
+                a.CoverImageUrl, a.MetaTitle, a.MetaDescription,
+                a.IsPublished, a.CategoryId,
+                CategoryName = a.Category.Name,
+                a.PublishedAt, a.UpdatedAt
+            })
+            .FirstOrDefaultAsync();
+
+        return article is null ? NotFound() : Ok(article);
+    }
+
     // ADMIN — Tüm makaleler (JWT gerektirir)
     [Authorize(Roles = "Admin")]
     [HttpGet("admin/all")]

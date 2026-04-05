@@ -15,6 +15,10 @@ async function fetchApi<T>(path: string, options?: RequestInit): Promise<T> {
     throw new Error(`API Error: ${res.status} ${res.statusText} — ${path}`);
   }
 
+  if (res.status === 204 || res.headers.get("content-length") === "0") {
+    return undefined as T;
+  }
+
   return res.json();
 }
 
@@ -53,6 +57,12 @@ export async function adminCreateArticle(token: string, data: unknown) {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
     body: JSON.stringify(data),
+  });
+}
+
+export async function adminGetArticleById(token: string, id: number) {
+  return fetchApi(`/articles/admin/${id}`, {
+    headers: { Authorization: `Bearer ${token}` },
   });
 }
 

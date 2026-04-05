@@ -1,0 +1,253 @@
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { ArrowLeft, Save, EyeOff, AlertCircle, CheckCircle, Upload, X } from "lucide-react";
+import { getCategories, adminGetArticleById, adminUpdateArticle, adminUploadImage } from "@/lib/api";
+import { getAdminToken } from "@/lib/auth";
+import type { Category } from "@/lib/types";
+import RichEditor from "@/components/admin/RichEditor";
+
+function slugify(text: string) {
+  return text.toLowerCase()
+    .replace(/ğ/g, "g").replace(/ü/g, "u").replace(/ş/g, "s")
+    .replace(/ı/g, "i").replace(/ö/g, "o").replace(/ç/g, "c")
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+const FIELD = "w-full border border-gray-200 bg-white px-4 py-2.5 text-sm text-gray-800 outline-none transition-colors placeholder:text-gray-400 focus:border-navy focus:ring-1 focus:ring-navy/20";
+
+export default function DuzenleMakalePage() {
+  const navigate = useNavigate();
+  const { id } = useParams<{ id: string }>();
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [form, setForm] = useState({
+    title: "", slug: "", summary: "", content: "",
+    coverImageUrl: "", metaTitle: "", metaDescription: "",
+    isPublished: false, categoryId: 0,
+  });
+  const [loadingArticle, setLoadingArticle] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const [uploadingCover, setUploadingCover] = useState(false);
+
+  useEffect(() => {
+    const token = getAdminToken();
+    if (!token) { navigate("/admin/login"); return; }
+
+    Promise.all([
+      getCategories(),
+      adminGetArticleById(token, Number(id)),
+    ])
+      .then(([cats, article]) => {
+        setCategories(cats as Category[]);
+        const a = article as {
+          title: string; slug: string; summary: string | null;
+          content: string; coverImageUrl: string | null;
+          metaTitle: string | null; metaDescription: string | null;
+          isPublished: boolean; categoryId: number;
+        };
+        setForm({
+          title: a.title,
+          slug: a.slug,
+          summary: a.summary ?? "",
+          content: a.content,
+          coverImageUrl: a.coverImageUrl ?? "",
+          metaTitle: a.metaTitle ?? "",
+          metaDescription: a.metaDescription ?? "",
+          isPublished: a.isPublished,
+          categoryId: a.categoryId,
+        });
+      })
+      .catch(() => setError("Makale yüklenirken bir hata oluştu."))
+      .finally(() => setLoadingArticle(false));
+  }, [id, navigate]);
+
+  function handleTitle(e: React.ChangeEvent<HTMLInputElement>) {
+    const title = e.target.value;
+    setForm((p) => ({ ...p, title, slug: slugify(title) }));
+  }
+
+  async function handleCoverUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    e.target.value = "";
+    const token = getAdminToken();
+    if (!token) return;
+    setUploadingCover(true);
+    try {
+      const { url } = await adminUploadImage(token, file) as { url: string };
+      setForm((p) => ({ ...p, coverImageUrl: url }));
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Görsel yüklenemedi.");
+    } finally {
+      setUploadingCover(false);
+    }
+  }
+
+  async function handleSubmit(publish: boolean) {
+    if (!form.title) { setError("Başlık zorunludur."); return; }
+    if (!form.content) { setError("İçerik zorunludur."); return; }
+    if (!form.categoryId) { setError("Kategori seçimi zorunludur."); return; }
+
+    const token = getAdminToken();
+    if (!token) { navigate("/admin/login"); return; }
+
+    setSaving(true);
+    setError(null);
+    try {
+      await adminUpdateArticle(token, Number(id), {
+        ...form,
+        isPublished: publish,
+        coverImageUrl: form.coverImageUrl || null,
+        metaTitle: form.metaTitle || null,
+        metaDescription: form.metaDescription || null,
+        summary: form.summary || null,
+      });
+      setSuccess(true);
+      setTimeout(() => navigate("/admin/blog"), 1200);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Kaydetme başarısız oldu.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  if (loadingArticle) {
+    return (
+      <div className="flex items-center justify-center py-32">
+        <span className="h-6 w-6 animate-spin rounded-full border-2 border-navy/20 border-t-navy" />
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <div className="mb-6 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <button onClick={() => navigate(-1)} className="flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-navy">
+            <ArrowLeft size={16} /> Geri
+          </button>
+          <span className="text-gray-200">/</span>
+          <h1 className="font-serif text-xl font-light text-navy">Makale Düzenle</h1>
+        </div>
+        <div className="flex items-center gap-2">
+          <button type="button" onClick={() => handleSubmit(false)} disabled={saving} className="inline-flex items-center gap-2 border border-gray-200 bg-white px-4 py-2 text-sm text-gray-600 transition-colors hover:border-navy hover:text-navy disabled:opacity-50">
+            <EyeOff size={14} /> Taslak Kaydet
+          </button>
+          <button type="button" onClick={() => handleSubmit(true)} disabled={saving} className="inline-flex items-center gap-2 bg-navy px-5 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-60">
+            {saving ? <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" /> : <Save size={14} />}
+            Yayınla
+          </button>
+        </div>
+      </div>
+
+      {error && (
+        <div className="mb-4 flex items-center gap-2.5 border border-red-100 bg-red-50 px-4 py-3 text-sm text-red-600">
+          <AlertCircle size={15} className="shrink-0" /> {error}
+        </div>
+      )}
+      {success && (
+        <div className="mb-4 flex items-center gap-2.5 border border-green-100 bg-green-50 px-4 py-3 text-sm text-green-700">
+          <CheckCircle size={15} className="shrink-0" /> Makale başarıyla güncellendi. Yönlendiriliyorsunuz...
+        </div>
+      )}
+
+      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+        <div className="space-y-5">
+          <div className="border border-gray-200 bg-white p-6 space-y-5">
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">Başlık <span className="text-red-400">*</span></label>
+              <input type="text" required value={form.title} onChange={handleTitle} className={FIELD} placeholder="Makale başlığı" />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">Slug (URL)</label>
+              <div className="flex items-center border border-gray-200 bg-gray-50 focus-within:border-navy focus-within:ring-1 focus-within:ring-navy/20">
+                <span className="border-r border-gray-200 px-3 py-2.5 text-xs text-gray-400">/blog/</span>
+                <input type="text" required value={form.slug} onChange={(e) => setForm((p) => ({ ...p, slug: e.target.value }))} className="flex-1 bg-transparent px-3 py-2.5 text-sm outline-none" placeholder="makale-slug" />
+              </div>
+            </div>
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">Özet</label>
+              <textarea rows={2} value={form.summary} onChange={(e) => setForm((p) => ({ ...p, summary: e.target.value }))} className={FIELD} placeholder="Kısa özet (liste görünümünde gösterilir)" />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">İçerik <span className="text-red-400">*</span></label>
+              <RichEditor
+                value={form.content}
+                onChange={(html) => setForm((p) => ({ ...p, content: html }))}
+                placeholder="Makale içeriğini buraya yazın..."
+              />
+            </div>
+          </div>
+          <div className="border border-gray-200 bg-white p-6 space-y-4">
+            <h2 className="text-xs font-medium uppercase tracking-wider text-gray-400">SEO Ayarları</h2>
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">Meta Başlık</label>
+              <input type="text" value={form.metaTitle} onChange={(e) => setForm((p) => ({ ...p, metaTitle: e.target.value }))} className={FIELD} placeholder="SEO başlığı" />
+              <p className="mt-1 text-right text-xs text-gray-400">{form.metaTitle.length}/60</p>
+            </div>
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-500">Meta Açıklama</label>
+              <textarea rows={2} value={form.metaDescription} onChange={(e) => setForm((p) => ({ ...p, metaDescription: e.target.value }))} className={FIELD} placeholder="Arama sonuçlarında görünen açıklama" />
+              <p className="mt-1 text-right text-xs text-gray-400">{form.metaDescription.length}/160</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="space-y-5">
+          <div className="border border-gray-200 bg-white p-5">
+            <h2 className="mb-4 text-xs font-medium uppercase tracking-wider text-gray-400">Yayın</h2>
+            <div className="space-y-3">
+              <div onClick={() => setForm((p) => ({ ...p, isPublished: false }))} className={`flex cursor-pointer items-center gap-3 border p-3 transition-colors ${!form.isPublished ? "border-amber-300 bg-amber-50" : "border-gray-100 hover:border-gray-200"}`}>
+                <div className={`h-3.5 w-3.5 rounded-full border-2 ${!form.isPublished ? "border-amber-500 bg-amber-500" : "border-gray-300"}`} />
+                <div>
+                  <p className="text-sm font-medium text-gray-700">Taslak</p>
+                  <p className="text-xs text-gray-400">Sadece adminler görebilir</p>
+                </div>
+              </div>
+              <div onClick={() => setForm((p) => ({ ...p, isPublished: true }))} className={`flex cursor-pointer items-center gap-3 border p-3 transition-colors ${form.isPublished ? "border-green-300 bg-green-50" : "border-gray-100 hover:border-gray-200"}`}>
+                <div className={`h-3.5 w-3.5 rounded-full border-2 ${form.isPublished ? "border-green-500 bg-green-500" : "border-gray-300"}`} />
+                <div>
+                  <p className="text-sm font-medium text-gray-700">Yayında</p>
+                  <p className="text-xs text-gray-400">Herkese açık</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border border-gray-200 bg-white p-5">
+            <h2 className="mb-3 text-xs font-medium uppercase tracking-wider text-gray-400">Kategori <span className="text-red-400">*</span></h2>
+            <select required value={form.categoryId} onChange={(e) => setForm((p) => ({ ...p, categoryId: Number(e.target.value) }))} className={FIELD}>
+              <option value={0} disabled>Kategori seçin...</option>
+              {categories.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+            </select>
+          </div>
+
+          <div className="border border-gray-200 bg-white p-5">
+            <h2 className="mb-3 text-xs font-medium uppercase tracking-wider text-gray-400">Kapak Fotoğrafı</h2>
+            {form.coverImageUrl ? (
+              <div>
+                <div className="relative aspect-video overflow-hidden border border-gray-100">
+                  <img src={form.coverImageUrl} alt="Kapak" className="absolute inset-0 h-full w-full object-cover" />
+                  <button type="button" onClick={() => setForm((p) => ({ ...p, coverImageUrl: "" }))} className="absolute top-2 right-2 flex h-6 w-6 items-center justify-center bg-black/50 text-white hover:bg-black/70">
+                    <X size={12} />
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <label className={`flex cursor-pointer flex-col items-center justify-center gap-2 border-2 border-dashed border-gray-200 bg-gray-50 py-8 text-center transition-colors hover:border-navy/40 ${uploadingCover ? "opacity-60 pointer-events-none" : ""}`}>
+                {uploadingCover
+                  ? <span className="h-5 w-5 animate-spin rounded-full border-2 border-navy/20 border-t-navy" />
+                  : <Upload size={20} className="text-gray-400" />
+                }
+                <span className="text-xs text-gray-400">{uploadingCover ? "Yükleniyor..." : "Tıkla veya sürükle"}</span>
+                <span className="text-[10px] text-gray-300">JPG, PNG, WebP · maks. 5 MB</span>
+                <input type="file" accept="image/*" className="hidden" onChange={handleCoverUpload} disabled={uploadingCover} />
+              </label>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

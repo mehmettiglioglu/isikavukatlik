@@ -123,7 +123,7 @@ export default function AdminBlogPage() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {filtered.map((article) => (
-                <tr key={article.id} className="group transition-colors hover:bg-gray-50/60">
+                <tr key={article.id} onClick={() => navigate(`/admin/blog/${article.id}/duzenle`)} className="group cursor-pointer transition-colors hover:bg-gray-50/60">
                   <td className="px-5 py-3.5">
                     <div className="flex items-center gap-3">
                       {article.coverImageUrl && (
@@ -142,7 +142,7 @@ export default function AdminBlogPage() {
                     </span>
                   </td>
                   <td className="px-5 py-3.5 text-gray-400 text-xs">{new Date(article.updatedAt).toLocaleDateString("tr-TR")}</td>
-                  <td className="px-5 py-3.5">
+                  <td className="px-5 py-3.5" onClick={(e) => e.stopPropagation()}>
                     <div className="flex items-center justify-end gap-1">
                       <a href={`/blog/${article.slug}`} target="_blank" rel="noopener noreferrer" className="p-1.5 text-gray-400 transition-colors hover:text-navy" title="Görüntüle">
                         <Eye size={15} />
