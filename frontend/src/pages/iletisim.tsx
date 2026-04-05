@@ -40,7 +40,7 @@ export default function IletisimPage() {
 
   const contactItems = [
     { icon: MapPin, label: "Adres", value: "Konya, Türkiye", detail: "Detaylı adres için arayınız" },
-    { icon: Phone, label: "Telefon", value: "+90 500 123 45 67", href: "tel:+905001234567" },
+    { icon: Phone, label: "Telefon", value: "+90 545 216 24 66", href: "tel:+905452162466" },
     { icon: Mail, label: "E-posta", value: "info@isikavukatlik.com", href: "mailto:info@isikavukatlik.com" },
     { icon: Clock, label: "Çalışma Saatleri", value: "Pazartesi – Cuma", detail: "09:00 – 18:00" },
   ];
@@ -81,7 +81,7 @@ export default function IletisimPage() {
             <div>
               {/* Hemen Ara */}
               <motion.a
-                href="tel:+905001234567"
+                href="tel:+905452162466"
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -92,7 +92,7 @@ export default function IletisimPage() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">Hemen Ara</p>
-                  <p className="mt-0.5 font-serif text-xl font-light text-white">+90 500 123 45 67</p>
+                  <p className="mt-0.5 font-serif text-xl font-light text-white">+90 545 216 24 66</p>
                   <p className="text-xs text-gray-400">Pzt – Cum 09:00 – 18:00</p>
                 </div>
                 <Phone size={18} className="ml-auto shrink-0 text-gold/40 transition-transform group-hover:scale-110" />

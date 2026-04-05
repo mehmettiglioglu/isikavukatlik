@@ -117,7 +117,7 @@ export default function HesaplamaDetayPage() {
                 </p>
                 <div className="mt-6 flex flex-col gap-2.5">
                   <a
-                    href="tel:+905001234567"
+                    href="tel:+905452162466"
                     className="flex items-center justify-center gap-2 rounded-xl bg-gold px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                   >
                     <Phone size={14} />

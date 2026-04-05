@@ -31,9 +31,9 @@ export default function Header() {
       )}
       role="banner"
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link to="/" className="flex items-center gap-3" aria-label="Işık Hukuk Bürosu — Ana Sayfa">
-          <div className="relative h-16 w-16 shrink-0">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3" aria-label="Işık Hukuk Bürosu — Ana Sayfa">
+          <div className="relative h-10 w-10 shrink-0 sm:h-12 sm:w-12 lg:h-16 lg:w-16">
             <img
               src="/pnglogoısık.png"
               alt="Işık Hukuk Bürosu Logo"
@@ -47,7 +47,7 @@ export default function Header() {
           <div className="flex flex-col">
             <span
               className={clsx(
-                "font-serif text-xl font-medium leading-tight tracking-wide transition-colors duration-300",
+                "font-serif text-base font-medium leading-tight tracking-wide transition-colors duration-300 sm:text-lg lg:text-xl",
                 transparent ? "text-white" : "text-navy"
               )}
             >
@@ -55,7 +55,7 @@ export default function Header() {
             </span>
             <span
               className={clsx(
-                "text-[11px] uppercase tracking-[0.18em] transition-colors duration-300",
+                "text-[9px] uppercase tracking-[0.14em] transition-colors duration-300 sm:text-[10px] sm:tracking-[0.16em] lg:text-[11px] lg:tracking-[0.18em]",
                 transparent ? "text-white/60" : "text-gray-400"
               )}
             >

@@ -210,7 +210,7 @@ export default function ContactSection() {
             </motion.div>
 
             {[
-              { icon: Phone, label: "Telefon", value: "+90 500 123 45 67", href: "tel:+905001234567" },
+              { icon: Phone, label: "Telefon", value: "+90 545 216 24 66", href: "tel:+905452162466" },
               { icon: Mail, label: "E-posta", value: "info@isikavukatlik.com", href: "mailto:info@isikavukatlik.com" },
               { icon: MapPin, label: "Konum", value: "Konya, Türkiye", href: undefined },
             ].map(({ icon: Icon, label, value, href }) => (
