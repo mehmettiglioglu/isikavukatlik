@@ -1,6 +1,6 @@
 import type { ArticleDetail, ArticleListItem, Category, LegalTermDetail, LegalTermListItem, PaginatedResponse } from "./types";
 
-const API_BASE = import.meta.env.VITE_API_URL ?? "http://localhost:5000/api";
+const API_BASE = import.meta.env.VITE_API_URL ?? "http://localhost:5050/api";
 
 async function fetchApi<T>(path: string, options?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
@@ -134,6 +134,21 @@ export async function adminMarkMessageRead(token: string, id: number) {
   return fetchApi<void>(`/contact/${id}/read`, {
     method: "PATCH",
     headers: { Authorization: `Bearer ${token}` },
+  });
+}
+
+export async function adminDeleteMessage(token: string, id: number) {
+  return fetchApi<void>(`/contact/${id}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+}
+
+export async function adminDeleteMessagesBulk(token: string, ids: number[]) {
+  return fetchApi<{ deleted: number }>("/contact/delete-bulk", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify(ids),
   });
 }
 

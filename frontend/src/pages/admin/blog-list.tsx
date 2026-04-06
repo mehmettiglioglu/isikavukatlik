@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Plus, Pencil, Trash2, Eye, EyeOff, Search, AlertCircle } from "lucide-react";
 import { adminGetAllArticles, adminDeleteArticle } from "@/lib/api";
 import { getAdminToken } from "@/lib/auth";
+import { useAdminModal } from "@/components/ui/AdminModal";
 
 interface AdminArticle {
   id: number;
@@ -42,8 +43,16 @@ export default function AdminBlogPage() {
 
   useEffect(() => { loadArticles(); }, [loadArticles]);
 
+  const { confirm } = useAdminModal();
+
   async function handleDelete(id: number, title: string) {
-    if (!confirm(`"${title}" başlıklı makaleyi silmek istediğinize emin misiniz?\n\nBu işlem geri alınamaz.`)) return;
+    const ok = await confirm({
+      title: "Makaleyi Sil",
+      message: `"${title}" başlıklı makaleyi silmek istediğinize emin misiniz? Bu işlem geri alınamaz.`,
+      confirmText: "Sil",
+      variant: "danger",
+    });
+    if (!ok) return;
     const token = getAdminToken();
     if (!token) return;
     setDeleting(id);

@@ -111,7 +111,6 @@ export function CalcDatePicker({
         showMonthDropdown
         showYearDropdown
         dropdownMode="select"
-        maxDate={new Date()}
         className="w-full border border-gray-200 bg-white px-5 py-3.5 text-base text-navy outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/10 placeholder-gray-300"
         wrapperClassName="w-full"
         calendarClassName="calc-calendar"

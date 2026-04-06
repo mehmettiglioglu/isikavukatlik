@@ -139,7 +139,7 @@ export default function IletisimPage() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">Hemen Ara</p>
-                  <p className="mt-0.5 font-serif text-lg font-light text-white sm:text-xl">+90 505 400 53 80</p>
+                  <p className="mt-0.5 text-lg tracking-wide text-white sm:text-xl">+90 505 400 53 80</p>
                   <p className="text-[10px] text-gray-400 sm:text-xs">Pzt – Cum 08:30 – 18:30 · Cmt 09:30 – 17:00</p>
                 </div>
                 <Phone size={18} className="ml-auto shrink-0 text-gold/40 transition-transform group-hover:scale-110" />
@@ -197,18 +197,6 @@ export default function IletisimPage() {
             <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-4">
               <motion.h2 variants={fadeUp} className="mb-6 font-serif text-2xl font-light text-navy">Bize Ulaşın</motion.h2>
 
-              {/* Adres */}
-              <motion.div variants={fadeUp} className="flex items-start gap-4 border border-gray-100 bg-white p-5 transition-colors hover:border-gold/30">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#f8f7f4]">
-                  <MapPin size={17} className="text-gold" />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-400">Adres</p>
-                  <p className="mt-1 font-medium text-navy">Konya, Türkiye</p>
-                  <p className="mt-0.5 text-sm text-gray-500">Detaylı adres için arayınız</p>
-                </div>
-              </motion.div>
-
               {/* Telefon */}
               <motion.div variants={fadeUp} className="flex items-start gap-4 border border-gray-100 bg-white p-5 transition-colors hover:border-gold/30">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#f8f7f4]">
@@ -216,7 +204,7 @@ export default function IletisimPage() {
                 </div>
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-gray-400">Telefon</p>
-                  <a href="tel:+905054005380" className="mt-1 block font-medium text-navy transition-colors hover:text-gold">
+                  <a href="tel:+905054005380" className="mt-1 block text-base tracking-wide text-navy transition-colors hover:text-gold">
                     +90 505 400 53 80
                   </a>
                 </div>

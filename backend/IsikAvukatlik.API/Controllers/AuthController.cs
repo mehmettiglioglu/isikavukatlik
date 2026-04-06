@@ -1,8 +1,6 @@
-using IsikAvukatlik.API.Data;
 using IsikAvukatlik.API.DTOs;
 using IsikAvukatlik.API.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace IsikAvukatlik.API.Controllers;
 
@@ -10,25 +8,18 @@ namespace IsikAvukatlik.API.Controllers;
 [Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
-    private readonly AppDbContext _db;
-    private readonly TokenService _tokenService;
+    private readonly IAuthService _authService;
 
-    public AuthController(AppDbContext db, TokenService tokenService)
-    {
-        _db = db;
-        _tokenService = tokenService;
-    }
+    public AuthController(IAuthService authService) => _authService = authService;
 
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequestDto dto)
     {
-        var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == dto.Username);
+        var result = await _authService.LoginAsync(dto);
 
-        if (user is null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
-            return Unauthorized(new { message = "Kullanıcı adı veya şifre hatalı." });
+        if (result is null)
+            return Unauthorized(new { message = "Kullanici adi veya sifre hatali." });
 
-        var (token, expiresAt) = _tokenService.CreateToken(user);
-
-        return Ok(new LoginResponseDto(token, user.Username, user.Role, expiresAt));
+        return Ok(result);
     }
 }

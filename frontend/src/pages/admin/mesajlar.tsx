@@ -1,8 +1,9 @@
 import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { Mail, MailOpen, AlertCircle, X, Phone, User, Tag, Clock } from "lucide-react";
-import { adminGetMessages, adminMarkMessageRead, type ContactMessage } from "@/lib/api";
+import { Mail, MailOpen, AlertCircle, X, Phone, User, Tag, Clock, Trash2, CheckSquare, Square } from "lucide-react";
+import { adminGetMessages, adminMarkMessageRead, adminDeleteMessage, adminDeleteMessagesBulk, type ContactMessage } from "@/lib/api";
 import { getAdminToken } from "@/lib/auth";
+import { useAdminModal } from "@/components/ui/AdminModal";
 
 export default function AdminMesajlarPage() {
   const navigate = useNavigate();
@@ -10,6 +11,9 @@ export default function AdminMesajlarPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<ContactMessage | null>(null);
+  const [selectedIds, setSelectedIds] = useState<Set<number>>(new Set());
+  const [deleting, setDeleting] = useState(false);
+  const { confirm } = useAdminModal();
 
   const load = useCallback(async () => {
     const token = getAdminToken();
@@ -44,20 +48,96 @@ export default function AdminMesajlarPage() {
     }
   }
 
+  function toggleSelect(id: number, e: React.MouseEvent) {
+    e.stopPropagation();
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleSelectAll() {
+    if (selectedIds.size === messages.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(messages.map((m) => m.id)));
+    }
+  }
+
+  async function handleDeleteSingle(id: number) {
+    const token = getAdminToken();
+    if (!token) return;
+    const ok = await confirm({
+      title: "Mesajı Sil",
+      message: "Bu mesajı silmek istediğinize emin misiniz?",
+      confirmText: "Sil",
+      variant: "danger",
+    });
+    if (!ok) return;
+
+    try {
+      await adminDeleteMessage(token, id);
+      setMessages((prev) => prev.filter((m) => m.id !== id));
+      setSelected(null);
+      setSelectedIds((prev) => { const next = new Set(prev); next.delete(id); return next; });
+    } catch {
+      setError("Mesaj silinirken hata oluştu.");
+    }
+  }
+
+  async function handleDeleteBulk() {
+    const token = getAdminToken();
+    if (!token) return;
+    if (selectedIds.size === 0) return;
+    const ok = await confirm({
+      title: "Toplu Silme",
+      message: `${selectedIds.size} mesajı silmek istediğinize emin misiniz? Bu işlem geri alınamaz.`,
+      confirmText: `${selectedIds.size} Mesajı Sil`,
+      variant: "danger",
+    });
+    if (!ok) return;
+
+    setDeleting(true);
+    try {
+      await adminDeleteMessagesBulk(token, Array.from(selectedIds));
+      setMessages((prev) => prev.filter((m) => !selectedIds.has(m.id)));
+      setSelectedIds(new Set());
+    } catch {
+      setError("Mesajlar silinirken hata oluştu.");
+    } finally {
+      setDeleting(false);
+    }
+  }
+
   const unread = messages.filter((m) => !m.isRead).length;
+  const allSelected = messages.length > 0 && selectedIds.size === messages.length;
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="font-serif text-2xl font-light text-navy">Gelen Mesajlar</h1>
-        <p className="mt-1 text-sm text-gray-400">
-          {messages.length} mesaj &mdash;{" "}
-          {unread > 0 ? (
-            <span className="font-medium text-gold">{unread} okunmamış</span>
-          ) : (
-            "tümü okundu"
-          )}
-        </p>
+      <div className="mb-8 flex items-start justify-between">
+        <div>
+          <h1 className="font-serif text-2xl font-light text-navy">Gelen Mesajlar</h1>
+          <p className="mt-1 text-sm text-gray-400">
+            {messages.length} mesaj &mdash;{" "}
+            {unread > 0 ? (
+              <span className="font-medium text-gold">{unread} okunmamış</span>
+            ) : (
+              "tümü okundu"
+            )}
+          </p>
+        </div>
+        {selectedIds.size > 0 && (
+          <button
+            onClick={handleDeleteBulk}
+            disabled={deleting}
+            className="inline-flex items-center gap-2 bg-red-600 px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-red-700 disabled:opacity-50"
+          >
+            <Trash2 size={14} />
+            {deleting ? "Siliniyor..." : `${selectedIds.size} Mesajı Sil`}
+          </button>
+        )}
       </div>
 
       <div className="mb-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -92,11 +172,17 @@ export default function AdminMesajlarPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100 bg-gray-50 text-left text-xs uppercase tracking-wider text-gray-400">
-                <th className="px-5 py-3 w-8"></th>
+                <th className="px-3 py-3 w-10">
+                  <button onClick={toggleSelectAll} className="text-gray-400 hover:text-navy transition-colors">
+                    {allSelected ? <CheckSquare size={16} /> : <Square size={16} />}
+                  </button>
+                </th>
+                <th className="px-3 py-3 w-8"></th>
                 <th className="px-5 py-3">Gönderen</th>
                 <th className="px-5 py-3">Konu</th>
                 <th className="px-5 py-3">Tarih</th>
                 <th className="px-5 py-3">Durum</th>
+                <th className="px-3 py-3 w-10"></th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
@@ -104,9 +190,15 @@ export default function AdminMesajlarPage() {
                 <tr
                   key={msg.id}
                   onClick={() => openMessage(msg)}
-                  className={`cursor-pointer transition-colors hover:bg-gray-50/60 ${!msg.isRead ? "bg-amber-50/30" : ""}`}
+                  className={`cursor-pointer transition-colors hover:bg-gray-50/60 ${!msg.isRead ? "bg-amber-50/30" : ""} ${selectedIds.has(msg.id) ? "bg-blue-50/40" : ""}`}
                 >
-                  <td className="pl-5 py-3.5">
+                  <td className="px-3 py-3.5" onClick={(e) => toggleSelect(msg.id, e)}>
+                    {selectedIds.has(msg.id)
+                      ? <CheckSquare size={16} className="text-navy" />
+                      : <Square size={16} className="text-gray-300 hover:text-gray-500" />
+                    }
+                  </td>
+                  <td className="px-3 py-3.5">
                     {msg.isRead
                       ? <MailOpen size={15} className="text-gray-300" />
                       : <Mail size={15} className="text-gold" />
@@ -127,6 +219,15 @@ export default function AdminMesajlarPage() {
                     <span className={`inline-flex items-center gap-1 text-xs font-medium ${msg.isRead ? "text-gray-400" : "text-gold"}`}>
                       {msg.isRead ? "Okundu" : "Yeni"}
                     </span>
+                  </td>
+                  <td className="px-3 py-3.5">
+                    <button
+                      onClick={(e) => { e.stopPropagation(); handleDeleteSingle(msg.id); }}
+                      className="text-gray-300 transition-colors hover:text-red-500"
+                      title="Sil"
+                    >
+                      <Trash2 size={14} />
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -187,19 +288,27 @@ export default function AdminMesajlarPage() {
             </div>
 
             {/* Aksiyonlar */}
-            <div className="flex justify-end gap-3 border-t border-gray-100 px-6 py-4">
-              <a
-                href={`mailto:${selected.email}?subject=Re: ${encodeURIComponent(selected.subject)}`}
-                className="inline-flex items-center gap-2 bg-navy px-5 py-2 text-xs font-medium uppercase tracking-widest text-white transition-opacity hover:opacity-90"
-              >
-                <Mail size={12} /> Yanıtla
-              </a>
+            <div className="flex justify-between border-t border-gray-100 px-6 py-4">
               <button
-                onClick={() => setSelected(null)}
-                className="px-5 py-2 text-xs font-medium uppercase tracking-widest text-gray-500 transition-colors hover:text-navy"
+                onClick={() => handleDeleteSingle(selected.id)}
+                className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium uppercase tracking-widest text-red-500 transition-colors hover:bg-red-50"
               >
-                Kapat
+                <Trash2 size={12} /> Sil
               </button>
+              <div className="flex gap-3">
+                <a
+                  href={`mailto:${selected.email}?subject=Re: ${encodeURIComponent(selected.subject)}`}
+                  className="inline-flex items-center gap-2 bg-navy px-5 py-2 text-xs font-medium uppercase tracking-widest text-white transition-opacity hover:opacity-90"
+                >
+                  <Mail size={12} /> Yanıtla
+                </a>
+                <button
+                  onClick={() => setSelected(null)}
+                  className="px-5 py-2 text-xs font-medium uppercase tracking-widest text-gray-500 transition-colors hover:text-navy"
+                >
+                  Kapat
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import PageLoader from "../components/ui/PageLoader";
@@ -8,6 +8,10 @@ import IsikAsistan from "../components/chatbot/IsikAsistan";
 export default function PublicLayout() {
   const { pathname } = useLocation();
   const isHome = pathname === "/";
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

@@ -2,13 +2,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace IsikAvukatlik.API.DTOs;
 
-public class LoginRequestDto
+public record LoginRequestDto
 {
     [Required]
-    public string Username { get; set; } = string.Empty;
+    public required string Username { get; init; }
 
     [Required]
-    public string Password { get; set; } = string.Empty;
+    public required string Password { get; init; }
 }
 
 public record LoginResponseDto(string Token, string Username, string Role, DateTime ExpiresAt);

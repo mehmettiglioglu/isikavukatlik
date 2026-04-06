@@ -33,7 +33,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 sm:px-6 sm:py-3">
         <Link to="/" className="flex items-center gap-2 sm:gap-3" aria-label="Işık Hukuk Bürosu — Ana Sayfa">
-          <div className="relative h-12 w-12 shrink-0 sm:h-16 sm:w-16 lg:h-20 lg:w-20">
+          <div className="relative h-18 w-18 shrink-0 sm:h-20 sm:w-20 lg:h-25 lg:w-25">
             <img
               src="/pnglogoısık.png"
               alt="Işık Hukuk Bürosu Logo"

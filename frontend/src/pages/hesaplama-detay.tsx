@@ -45,7 +45,7 @@ export default function HesaplamaDetayPage() {
 
       {/* ── Hero ── */}
       <section className="bg-navy py-16">
-        <div className="mx-auto max-w-5xl px-6">
+        <div className="mx-auto max-w-7xl px-6">
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex flex-wrap items-center gap-1.5 text-xs text-gray-500">
@@ -88,8 +88,8 @@ export default function HesaplamaDetayPage() {
 
       {/* ── Hesaplama ── */}
       <section className="bg-surface py-14">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-8 lg:grid-cols-[1fr_272px]">
 
             {/* Ana hesaplama kartı */}
             <AnimatePresence mode="wait">
@@ -98,14 +98,14 @@ export default function HesaplamaDetayPage() {
                 initial={{ opacity: 0, y: 14 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="flex-1 min-w-0 rounded-2xl bg-white p-8 shadow-sm md:p-10"
+                className="min-w-0 overflow-hidden rounded-2xl bg-white p-8 shadow-sm md:p-10"
               >
                 {Component && <Component />}
               </motion.div>
             </AnimatePresence>
 
             {/* Sağ sidebar */}
-            <aside className="lg:w-72 shrink-0 space-y-4">
+            <aside className="space-y-4">
               {/* Danış kutusu */}
               <div className="rounded-2xl bg-navy p-7">
                 <div className="mb-1 h-1 w-8 rounded-full bg-gold" />

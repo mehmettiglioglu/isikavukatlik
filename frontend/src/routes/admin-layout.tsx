@@ -4,6 +4,7 @@ import { Mail, X, ArrowRight } from "lucide-react";
 import AdminLogout from "../components/admin/AdminLogout";
 import { adminGetMessages, adminMarkMessageRead, type ContactMessage } from "../lib/api";
 import { getAdminToken } from "../lib/auth";
+import { AdminModalProvider } from "../components/ui/AdminModal";
 
 export default function AdminLayout() {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ export default function AdminLayout() {
   }
 
   return (
+    <AdminModalProvider>
     <div className="min-h-screen bg-[#f8f7f4]">
       <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
@@ -60,7 +62,6 @@ export default function AdminLayout() {
             {[
               { to: "/admin/blog", label: "Makaleler" },
               { to: "/admin/mesajlar", label: "Mesajlar" },
-              { to: "/admin/dosyalar", label: "Dosyalar" },
             ].map(({ to, label }) => (
               <Link
                 key={to}
@@ -136,5 +137,6 @@ export default function AdminLayout() {
         </div>
       )}
     </div>
+    </AdminModalProvider>
   );
 }

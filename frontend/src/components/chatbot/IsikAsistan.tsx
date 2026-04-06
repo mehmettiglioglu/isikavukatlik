@@ -429,8 +429,9 @@ export default function IsikAsistan() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const hasInitialized = useRef(false);
 
-  // Sayfa yüklendikten 3-4 sn sonra otomatik aç
+  // Sayfa yüklendikten 3-4 sn sonra otomatik aç (session'da sadece 1 kez)
   useEffect(() => {
+    if (sessionStorage.getItem("chatbot_dismissed")) return;
     const delay = 3000 + Math.random() * 1000;
     const timer = setTimeout(() => setOpen(true), delay);
     return () => clearTimeout(timer);
@@ -560,7 +561,7 @@ export default function IsikAsistan() {
                 </p>
               </div>
               <button
-                onClick={() => setOpen(false)}
+                onClick={() => { sessionStorage.setItem("chatbot_dismissed", "1"); setOpen(false); }}
                 className="flex h-8 w-8 items-center justify-center text-gray-400 transition-colors hover:text-white"
                 aria-label="Kapat"
               >
@@ -589,8 +590,8 @@ export default function IsikAsistan() {
                     >
                       {msg.type === "bot" ? (
                         <div className="max-w-[88%]">
-                          <div className="bg-[#f8f7f4] px-4 py-3">
-                            <p className="text-[13px] leading-relaxed text-gray-700">
+                          <div className="bg-navy px-4 py-3">
+                            <p className="text-[13px] leading-relaxed text-white">
                               {msg.text}
                             </p>
                           </div>
@@ -619,16 +620,14 @@ export default function IsikAsistan() {
                                         Hemen Ara
                                       </a>
                                     )}
-                                  {msg.node.action === "contact" && (
-                                    <button
-                                      type="button"
-                                      onClick={() => setShowForm(true)}
-                                      className="inline-flex min-h-[44px] items-center gap-1.5 border border-navy px-3 py-2.5 text-[11px] font-medium uppercase tracking-[0.12em] text-navy transition-colors hover:bg-navy hover:text-white"
-                                    >
-                                      <Send size={12} />
-                                      Mesaj Gonder
-                                    </button>
-                                  )}
+                                  <button
+                                    type="button"
+                                    onClick={() => setShowForm(true)}
+                                    className="inline-flex min-h-[44px] items-center gap-1.5 border border-navy px-3 py-2.5 text-[11px] font-medium uppercase tracking-[0.12em] text-navy transition-colors hover:bg-navy hover:text-white"
+                                  >
+                                    <Send size={12} />
+                                    Mesaj Gönder
+                                  </button>
                                   {msg.node.areaSlug && (
                                     <Link
                                       to={`/calisma-alanlari/${msg.node.areaSlug}`}
@@ -643,7 +642,7 @@ export default function IsikAsistan() {
 
                                 {/* Inline form */}
                                 <AnimatePresence>
-                                  {showForm && msg.node.action === "contact" && (
+                                  {showForm && (
                                     <InlineContactForm
                                       context={formContext}
                                       onClose={() => setShowForm(false)}

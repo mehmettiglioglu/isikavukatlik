@@ -1,9 +1,7 @@
-using IsikAvukatlik.API.Data;
 using IsikAvukatlik.API.DTOs;
-using IsikAvukatlik.API.Models;
+using IsikAvukatlik.API.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace IsikAvukatlik.API.Controllers;
 
@@ -11,61 +9,52 @@ namespace IsikAvukatlik.API.Controllers;
 [Route("api/[controller]")]
 public class ContactController : ControllerBase
 {
-    private readonly AppDbContext _db;
+    private readonly IContactService _contactService;
 
-    public ContactController(AppDbContext db) => _db = db;
+    public ContactController(IContactService contactService) => _contactService = contactService;
 
     [HttpPost]
-    public async Task<IActionResult> Submit([FromBody] ContactDto dto)
+    public async Task<IActionResult> Submit([FromBody] CreateContactRequest request)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        var message = new ContactMessage
-        {
-            Name = dto.Name,
-            Email = dto.Email,
-            Phone = dto.Phone,
-            Subject = dto.Subject,
-            Message = dto.Message,
-        };
-
-        _db.ContactMessages.Add(message);
-        await _db.SaveChangesAsync();
-
+        await _contactService.SubmitAsync(request);
         return Ok(new { success = true });
     }
 
     [HttpGet]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetAll()
     {
-        var messages = await _db.ContactMessages
-            .OrderByDescending(m => m.CreatedAt)
-            .Select(m => new
-            {
-                m.Id,
-                m.Name,
-                m.Email,
-                m.Phone,
-                m.Subject,
-                m.Message,
-                m.CreatedAt,
-                m.IsRead,
-            })
-            .ToListAsync();
-
+        var messages = await _contactService.GetAllAsync();
         return Ok(messages);
     }
 
     [HttpPatch("{id}/read")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> MarkRead(int id)
     {
-        var msg = await _db.ContactMessages.FindAsync(id);
-        if (msg is null) return NotFound();
-        msg.IsRead = true;
-        await _db.SaveChangesAsync();
-        return NoContent();
+        var marked = await _contactService.MarkReadAsync(id);
+        return marked ? NoContent() : NotFound();
+    }
+
+    [HttpDelete("{id:int}")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var deleted = await _contactService.DeleteAsync(id);
+        return deleted ? NoContent() : NotFound();
+    }
+
+    [HttpPost("delete-bulk")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> DeleteBulk([FromBody] List<int> ids)
+    {
+        if (ids is null || ids.Count == 0)
+            return BadRequest(new { error = "Silinecek mesaj ID'leri belirtilmedi." });
+
+        var count = await _contactService.DeleteBulkAsync(ids);
+        return Ok(new { deleted = count });
     }
 }

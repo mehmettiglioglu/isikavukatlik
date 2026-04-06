@@ -36,7 +36,7 @@ export default function PageLoader() {
               initial={{ opacity: 0, scale: 0.75 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative h-20 w-20"
+              className="relative h-30 w-30"
             >
               <img
                 src="/pnglogoısık.png"
@@ -52,15 +52,15 @@ export default function PageLoader() {
               transition={{ delay: 0.2, duration: 0.4 }}
               className="text-center"
             >
-              <p className="font-serif text-xl font-light tracking-wide text-white">
+              <p className="font-serif text-3xl font-light tracking-wide text-white">
                 Işık Hukuk Bürosu
               </p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.25em] text-gold">
+              <p className="mt-1.5 text-[15px] uppercase tracking-[0.25em] text-gold">
                 Avukatlık &amp; Danışmanlık
               </p>
             </motion.div>
 
-            <div className="h-px w-40 overflow-hidden bg-white/10">
+            <div className="h-px w-60 overflow-hidden bg-white/10">
               <motion.div
                 className="h-full bg-gold"
                 initial={{ scaleX: 0, originX: 0 }}

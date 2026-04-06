@@ -17,6 +17,7 @@ import {
 import clsx from "clsx";
 import { adminUploadImage } from "@/lib/api";
 import { getAdminToken } from "@/lib/auth";
+import { useAdminModal } from "@/components/ui/AdminModal";
 
 interface RichEditorProps {
   value: string;
@@ -27,6 +28,7 @@ interface RichEditorProps {
 export default function RichEditor({ value, onChange, placeholder }: RichEditorProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const uploadingRef = useRef(false);
+  const { prompt } = useAdminModal();
 
   const editor = useEditor({
     extensions: [
@@ -43,14 +45,20 @@ export default function RichEditor({ value, onChange, placeholder }: RichEditorP
     },
   });
 
-  const setLink = useCallback(() => {
+  const setLink = useCallback(async () => {
     if (!editor) return;
     const prev = editor.getAttributes("link").href as string | undefined;
-    const url = window.prompt("Bağlantı URL'si:", prev ?? "https://");
+    const url = await prompt({
+      title: "Bağlantı Ekle",
+      message: "Bağlantı URL'sini girin",
+      placeholder: "https://ornek.com",
+      defaultValue: prev ?? "https://",
+      confirmText: "Uygula",
+    });
     if (url === null) return;
     if (url === "") { editor.chain().focus().unsetLink().run(); return; }
     editor.chain().focus().setLink({ href: url }).run();
-  }, [editor]);
+  }, [editor, prompt]);
 
   async function handleImageUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];

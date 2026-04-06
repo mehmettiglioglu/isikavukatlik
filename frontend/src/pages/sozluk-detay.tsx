@@ -111,7 +111,7 @@ export default function SozlukDetayPage() {
 
           {/* Kategori + harf */}
           <div className="mb-4 flex flex-wrap items-center gap-3">
-            <span className="border border-gold/50 px-3 py-1 text-xs text-gold">{term.category}</span>
+            {term.category && <span className="border border-gold/50 px-3 py-1 text-xs text-gold">{term.category}</span>}
             <span className="flex h-6 w-6 items-center justify-center bg-gold/15 font-serif text-sm text-gold">{term.letter}</span>
           </div>
 
@@ -192,10 +192,12 @@ export default function SozlukDetayPage() {
           {/* Yan panel */}
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-4">
-              <div className="border border-gray-100 bg-white p-5">
-                <p className="mb-3 text-[10px] uppercase tracking-widest text-gray-400">Kategori</p>
-                <p className="text-sm font-medium text-navy">{term.category}</p>
-              </div>
+              {term.category && (
+                <div className="border border-gray-100 bg-white p-5">
+                  <p className="mb-3 text-[10px] uppercase tracking-widest text-gray-400">Kategori</p>
+                  <p className="text-sm font-medium text-navy">{term.category}</p>
+                </div>
+              )}
               <div className="border border-gold/20 bg-gold/5 p-5">
                 <p className="mb-2 font-serif text-base font-light text-navy">Hukuki Destek</p>
                 <p className="text-xs leading-relaxed text-gray-500">Bu konuda uzman avukatımızdan bilgi almak ister misiniz?</p>

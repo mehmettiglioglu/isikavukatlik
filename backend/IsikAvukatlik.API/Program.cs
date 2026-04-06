@@ -1,6 +1,7 @@
 using System.Text;
 using IsikAvukatlik.API.Data;
-using IsikAvukatlik.API.Services;
+using IsikAvukatlik.API.Extensions;
+using IsikAvukatlik.API.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -14,6 +15,10 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // --- JWT ---
 var jwtSettings = builder.Configuration.GetSection("Jwt");
+var jwtKey = jwtSettings["Key"];
+if (string.IsNullOrWhiteSpace(jwtKey) || jwtKey.Length < 32 || jwtKey.Contains("CHANGE_THIS"))
+    throw new InvalidOperationException("JWT Key yapilandirilmali. En az 32 karakter uzunlugunda kriptografik bir anahtar ayarlayin.");
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -26,14 +31,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidIssuer = jwtSettings["Issuer"],
             ValidAudience = jwtSettings["Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(jwtSettings["Key"]!))
+                Encoding.UTF8.GetBytes(jwtKey))
         };
     });
 
 builder.Services.AddAuthorization();
-builder.Services.AddScoped<TokenService>();
 
-// --- CORS (Frontend dev/prod) ---
+// --- Application Services ---
+builder.Services.AddApplicationServices();
+
+// --- CORS ---
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontendPolicy", policy =>
@@ -41,6 +48,7 @@ builder.Services.AddCors(options =>
         policy
             .WithOrigins(
                 builder.Configuration["AllowedOrigins:Dev"] ?? "http://localhost:3000",
+                "http://localhost:3001",
                 builder.Configuration["AllowedOrigins:Prod"] ?? "https://isikavukatlik.com"
             )
             .AllowAnyHeader()
@@ -52,7 +60,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Işık Avukatlık API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Isik Avukatlik API", Version = "v1" });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -73,48 +81,31 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+// --- Health Checks ---
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
-// --- Otomatik Migration / Tablo Oluşturma ---
-using (var scope = app.Services.CreateScope())
+// --- Database Setup ---
+if (app.Environment.IsDevelopment())
 {
+    using var scope = app.Services.CreateScope();
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    // Migration dosyası yoksa EnsureCreated ile tüm tablolar oluşturulur
     await db.Database.EnsureCreatedAsync();
 
-    // ContactMessages tablosu yoksa manuel oluştur (schema güncellemeleri için)
-    await db.Database.ExecuteSqlRawAsync("""
-        CREATE TABLE IF NOT EXISTS "ContactMessages" (
-            "Id" SERIAL PRIMARY KEY,
-            "Name" TEXT NOT NULL DEFAULT '',
-            "Email" TEXT NOT NULL DEFAULT '',
-            "Phone" TEXT NULL,
-            "Subject" TEXT NOT NULL DEFAULT '',
-            "Message" TEXT NOT NULL DEFAULT '',
-            "CreatedAt" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-            "IsRead" BOOLEAN NOT NULL DEFAULT FALSE
-        );
-    """);
-
-    // LegalTerms tablosu yoksa oluştur
-    await db.Database.ExecuteSqlRawAsync("""
-        CREATE TABLE IF NOT EXISTS "LegalTerms" (
-            "Id" SERIAL PRIMARY KEY,
-            "Title" VARCHAR(300) NOT NULL DEFAULT '',
-            "Slug" VARCHAR(350) NOT NULL DEFAULT '',
-            "Letter" VARCHAR(1) NOT NULL DEFAULT '',
-            "Category" VARCHAR(200) NOT NULL DEFAULT '',
-            "Definition" TEXT NOT NULL DEFAULT '',
-            "ShortDescription" VARCHAR(500) NULL,
-            "IsPublished" BOOLEAN NOT NULL DEFAULT TRUE,
-            "CreatedAt" TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-            "UpdatedAt" TIMESTAMPTZ NOT NULL DEFAULT NOW()
-        );
-        CREATE UNIQUE INDEX IF NOT EXISTS "IX_LegalTerms_Slug" ON "LegalTerms" ("Slug");
-        CREATE INDEX IF NOT EXISTS "IX_LegalTerms_Letter" ON "LegalTerms" ("Letter");
-        CREATE INDEX IF NOT EXISTS "IX_LegalTerms_Category" ON "LegalTerms" ("Category");
-    """);
+    // Seed legal terms from JSON if table is empty or has few records
+    var legalTermService = scope.ServiceProvider.GetRequiredService<IsikAvukatlik.API.Services.ILegalTermService>();
+    var jsonPath = Path.Combine(app.Environment.ContentRootPath, "legal_terms.json");
+    if (File.Exists(jsonPath))
+    {
+        var count = await legalTermService.SeedFromJsonAsync(jsonPath);
+        if (count > 0)
+            app.Logger.LogInformation("Seeded {Count} legal terms from JSON", count);
+    }
 }
+
+// --- Middleware Pipeline ---
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
@@ -125,7 +116,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors("FrontendPolicy");
 
-// Görselleri proje kökündeki uploads/ klasöründen sun
 var uploadsPath = app.Configuration["UploadsPath"]
     ?? Path.Combine(app.Environment.ContentRootPath, "uploads");
 Directory.CreateDirectory(uploadsPath);
@@ -134,8 +124,10 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(uploadsPath),
     RequestPath = "/uploads"
 });
+
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
+app.MapHealthChecks("/health");
 
 app.Run();

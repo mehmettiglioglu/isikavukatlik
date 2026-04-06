@@ -1,0 +1,2603 @@
+[
+  {
+    "Id": 1,
+    "Title": "ABDİ (Abdi hak)",
+    "Slug": "abdi-abdi-hak",
+    "Letter": "A",
+    "Definition": "Kişiye sıkı sıkıya bağlı, devredilmesi veya miras bırakılması kural olarak mümkün olmayan hakları ifade eder. Örneğin nişanlanma, boşanma davası açma gibi haklar kişiye özgüdür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 2,
+    "Title": "Açık artırma",
+    "Slug": "acik-artirma",
+    "Letter": "A",
+    "Definition": "Bir malın en yüksek teklifi verene satıldığı satış yöntemidir. İcra ve iflas hukukunda cebrî satışların temel araçlarından biridir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 3,
+    "Title": "Açık hüküm",
+    "Slug": "acik-hukum",
+    "Letter": "A",
+    "Definition": "Kararın hüküm fıkrasında tereddüde yer vermeyecek açıklıkta yazılan sonucu anlatır. Uygulamada infazda sorun çıkmaması için önemlidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 4,
+    "Title": "Acenta",
+    "Slug": "acenta",
+    "Letter": "A",
+    "Definition": "Ticari temsil yetkisi çerçevesinde müvekkili adına sürekli işlem yapan bağımsız tacir yardımcıdır. Acentelik sözleşmesiyle yetki ve sorumlulukları belirlenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 5,
+    "Title": "Adalet",
+    "Slug": "adalet",
+    "Letter": "A",
+    "Definition": "Hukuki düzenin hakkaniyete uygun uygulanması ve eşitlik ilkesinin gözetilmesidir. Yargı organlarının nihai hedefi adaleti sağlamaktır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 6,
+    "Title": "Adi ortaklık",
+    "Slug": "adi-ortaklik",
+    "Letter": "A",
+    "Definition": "İki veya daha çok kişinin ortak bir amaca ulaşmak için emek veya malvarlığı değerlerini birleştirdiği sözleşmesel birliktir. Tüzel kişiliği yoktur; ortaklar müteselsilen sorumludur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 7,
+    "Title": "Adi yazılı şekil",
+    "Slug": "adi-yazili-sekil",
+    "Letter": "A",
+    "Definition": "Noter onayı aranmaksızın tarafların imzasını taşıyan yazılı şekildir. Bazı sözleşmelerin ispatı için aranabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 8,
+    "Title": "Adli kontrol",
+    "Slug": "adli-kontrol",
+    "Letter": "A",
+    "Definition": "Tutuklama yerine başvurulan, şüpheli/sanığın belirli yükümlülüklere tabi tutulduğu koruma tedbiridir. Yurt dışına çıkış yasağı, imza yükümlülüğü gibi tedbirler içerir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 9,
+    "Title": "Adli para cezası",
+    "Slug": "adli-para-cezasi",
+    "Letter": "A",
+    "Definition": "Hapis cezasına seçenek veya yanında uygulanabilen, belirli miktarın ödenmesi şeklindeki yaptırımdır. Ödenmemesi hâlinde kamuya yararlı işte çalışma veya tazyik hapsi gündeme gelebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 10,
+    "Title": "Adli sicil",
+    "Slug": "adli-sicil",
+    "Letter": "A",
+    "Definition": "Kesinleşmiş mahkûmiyet kararlarının kaydedildiği resmi veri tabanıdır. Belirli süreler sonunda silme veya arşive aktarma mümkündür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 11,
+    "Title": "Adli tatil",
+    "Slug": "adli-tatil",
+    "Letter": "A",
+    "Definition": "Yargı hizmetlerinin kısıtlı yürütüldüğü yaz dönemi aralığıdır. Bu sürede sadece kanunda sayılan ivedi işler görülür; süreler hakkında özel hükümler uygulanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 12,
+    "Title": "Adli yargı",
+    "Slug": "adli-yargi",
+    "Letter": "A",
+    "Definition": "Hukuk ve ceza mahkemelerinden oluşan yargı koludur. Özel kişiler arasındaki uyuşmazlıklar ve suçlar bu yargı kolunda görülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 13,
+    "Title": "Aile konutu",
+    "Slug": "aile-konutu",
+    "Letter": "A",
+    "Definition": "Eşlerin ortak yaşamlarını sürdürdüğü, aile yaşamının merkezi olan konuttur. Üzerindeki tasarruf işlemlerinde eşin rızası aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 14,
+    "Title": "Aile mahkemesi",
+    "Slug": "aile-mahkemesi",
+    "Letter": "A",
+    "Definition": "Aile hukukundan doğan uyuşmazlıklara bakan ihtisas mahkemesidir. Boşanma, velayet, nafaka gibi davaları görür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 15,
+    "Title": "AİHM (Avrupa İnsan Hakları Mahkemesi)",
+    "Slug": "aihm-avrupa-insan-haklari-mahkemesi",
+    "Letter": "A",
+    "Definition": "Avrupa İnsan Hakları Sözleşmesi’ne taraf devletler hakkında bireysel başvuruları karara bağlayan uluslararası yargı organıdır. İhlal tespitinde tazminata hükmedebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 16,
+    "Title": "AİHS (Avrupa İnsan Hakları Sözleşmesi)",
+    "Slug": "aihs-avrupa-insan-haklari-sozlesmesi",
+    "Letter": "A",
+    "Definition": "Temel hak ve özgürlükleri güvenceye alan bölgesel sözleşmedir. Taraf devletler sözleşmeye uygun davranmak ve iç hukuklarını uyumlu hale getirmekle yükümlüdür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 17,
+    "Title": "Akdi temsil",
+    "Slug": "akdi-temsil",
+    "Letter": "A",
+    "Definition": "Sözleşmeye dayalı olarak bir kişinin başka biri adına hukukî işlem yapmasıdır. Temsil yetkisinin sınırları dışına çıkılması hâlinde yetkisiz temsil söz konusu olur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 18,
+    "Title": "Akdi sorumluluk",
+    "Slug": "akdi-sorumluluk",
+    "Letter": "A",
+    "Definition": "Sözleşmeden doğan borçların ihlali nedeniyle ortaya çıkan tazmin yükümlülüğüdür. Kusur, zarar ve illiyet bağının varlığı aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 19,
+    "Title": "Akit (Sözleşme)",
+    "Slug": "akit-sozlesme",
+    "Letter": "A",
+    "Definition": "Tarafların karşılıklı ve uygun irade beyanlarıyla kurulan hukukî bağdır. Geçerlilik için ehliyet, konu ve şekil şartları önemlidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 20,
+    "Title": "Alacak davası",
+    "Slug": "alacak-davasi",
+    "Letter": "A",
+    "Definition": "Alacaklının, borçludan edimin ifasını yargı yoluyla talep ettiği davadır. İspat yükü kural olarak alacaklıdadır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 21,
+    "Title": "Aleniyet ilkesi",
+    "Slug": "aleniyet-ilkesi",
+    "Letter": "A",
+    "Definition": "Yargılamanın kamuya açık yürütülmesini ifade eder. Hukukun şeffaflığı ve denetlenebilirliği için temel ilkedir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 22,
+    "Title": "Anayasa",
+    "Slug": "anayasa",
+    "Letter": "A",
+    "Definition": "Devletin temel örgütlenmesini, temel hak ve özgürlükleri düzenleyen en üst normdur. Diğer tüm kanunlar Anayasa’ya aykırı olamaz.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 23,
+    "Title": "Anayasa Mahkemesi (AYM)",
+    "Slug": "anayasa-mahkemesi-aym",
+    "Letter": "A",
+    "Definition": "Kanunların Anayasa’ya uygunluğunu denetleyen yüksek mahkemedir. Bireysel başvuru yoluyla temel hak ihlallerini de inceler.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 24,
+    "Title": "Anonim şirket",
+    "Slug": "anonim-sirket",
+    "Letter": "A",
+    "Definition": "Sermayesi paylara bölünmüş, ortakların sorumluluğu taahhüt ettikleri sermaye ile sınırlı olan sermaye şirketidir. Yönetim kurulu tarafından temsil edilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 25,
+    "Title": "Arabulucu",
+    "Slug": "arabulucu",
+    "Letter": "A",
+    "Definition": "Tarafları uzlaşmaya yönlendiren tarafsız üçüncü kişidir. Gizlilik ve iradilik prensipleri çerçevesinde süreç yürütülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 26,
+    "Title": "Arabuluculuk (ihtiyari/zorunlu)",
+    "Slug": "arabuluculuk-ihtiyari-zorunlu",
+    "Letter": "A",
+    "Definition": "Tarafların mahkeme dışında uyuşmazlıklarını çözmeyi denedikleri alternatif yöntemdir. Bazı uyuşmazlıklarda dava şartı olarak zorunludur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 27,
+    "Title": "Asliye ceza mahkemesi",
+    "Slug": "asliye-ceza-mahkemesi",
+    "Letter": "A",
+    "Definition": "Ağır ceza kapsamına girmeyen suçlara bakan ilk derece ceza mahkemesidir. Tek hâkimli olarak yargılama yapar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 28,
+    "Title": "Asliye hukuk mahkemesi",
+    "Slug": "asliye-hukuk-mahkemesi",
+    "Letter": "A",
+    "Definition": "Hukukun genel mahkemesidir; özel görevli mahkeme bulunmadığında görevli olur. Çoğu özel hukuk davasına bakar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 29,
+    "Title": "Ayni hak",
+    "Slug": "ayni-hak",
+    "Letter": "A",
+    "Definition": "Eşya üzerinde doğrudan hâkimiyet sağlayan mutlak haktır. Mülkiyet, irtifak ve rehin hakları başlıca ayni haklardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 30,
+    "Title": "Ayıplı mal/hizmet",
+    "Slug": "ayipli-mal-hizmet",
+    "Letter": "A",
+    "Definition": "Sözleşmeye veya amaca uygun nitelikleri taşımayan mal veya hizmettir. Tüketici, seçimlik haklarını kullanarak ayıbın sonuçlarını giderebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 31,
+    "Title": "Azil (vekilin azli)",
+    "Slug": "azil-vekilin-azli",
+    "Letter": "A",
+    "Definition": "Vekâlet verenin vekilin yetkisini sona erdirmesidir. Azil, vekâlet ilişkisinin güven esasına dayandığını gösterir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 32,
+    "Title": "Bağlılık ilkesi",
+    "Slug": "baglilik-ilkesi",
+    "Letter": "B",
+    "Definition": "Mahkemenin önceki bozma kararına veya üst mahkeme talimatına uyması gerektiğini ifade eden ilkedir. Usul ekonomisi ve hukuki güvenliği destekler.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 33,
+    "Title": "Bankacılık sırrı",
+    "Slug": "bankacilik-sirri",
+    "Letter": "B",
+    "Definition": "Müşteri bilgilerinin gizliliğine ilişkin yükümlülüktür. Hukuki istisnalar saklı kalmak kaydıyla üçüncü kişilerle paylaşılamaz.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 34,
+    "Title": "Basit yargılama usulü",
+    "Slug": "basit-yargilama-usulu",
+    "Letter": "B",
+    "Definition": "Daha hızlı sonuç alınması amaçlanan, yazılı beyanların kısmen sınırlı olduğu yargılama usulüdür. Kanunda sayılı dava türlerinde uygulanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 35,
+    "Title": "Beraat",
+    "Slug": "beraat",
+    "Letter": "B",
+    "Definition": "Sanığın suçsuz olduğuna karar verilmesidir. Yeterli, kesin ve inandırıcı delil bulunmadığında beraat verilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 36,
+    "Title": "Beraat-i zimmet",
+    "Slug": "beraat-i-zimmet",
+    "Letter": "B",
+    "Definition": "Ceza yargılamasında masumiyet karinesiyle bağlantılı olarak, şüpheden sanık yararlanır ilkesinin yansımasıdır. Suçluluğu ispat yükü iddia makamındadır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 37,
+    "Title": "Bilirkişi",
+    "Slug": "bilirkisi",
+    "Letter": "B",
+    "Definition": "Çözümü özel veya teknik bilgiyi gerektiren konularda mahkemeye yardımcı olan kişidir. Raporu hakimi bağlamaz; takdir yetkisi hâkimdedir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 38,
+    "Title": "Bozma",
+    "Slug": "bozma",
+    "Letter": "B",
+    "Definition": "İstinaf veya temyiz merciinin, alt mahkeme kararını hukuka aykırılık nedeniyle kaldırmasıdır. Sonrasında dosya yeniden görülmek üzere geri gönderilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 39,
+    "Title": "Bozma sonrası usul",
+    "Slug": "bozma-sonrasi-usul",
+    "Letter": "B",
+    "Definition": "Bozma ilamındaki gerekçelere uygun olarak yeniden yargılama yapılmasını ifade eder. Bağlılık ilkesi burada önem kazanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 40,
+    "Title": "Borç",
+    "Slug": "borc",
+    "Letter": "B",
+    "Definition": "Alacaklı lehine bir edimin ifasını gerektiren yükümlülüktür. Konusu verme, yapma veya yapmama olabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 41,
+    "Title": "Borcun ifası",
+    "Slug": "borcun-ifasi",
+    "Letter": "B",
+    "Definition": "Borçlunun edimini sözleşmeye uygun şekilde yerine getirmesidir. Süresinde ve doğru ifa borcu sona erdirir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 42,
+    "Title": "Borcun temerrüdü",
+    "Slug": "borcun-temerrudu",
+    "Letter": "B",
+    "Definition": "Borçlunun borcunu zamanında yerine getirmemesi hâlidir. Alacaklı gecikme zararını ve faizini talep edebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 43,
+    "Title": "Borçlar Kanunu",
+    "Slug": "borclar-kanunu",
+    "Letter": "B",
+    "Definition": "Borç ilişkilerinin kuruluşunu, hükümlerini ve sona ermesini düzenleyen temel kanundur. Sözleşmeler ve haksız fiiller başlıca konularıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 44,
+    "Title": "Butlan (mutlak/nispî)",
+    "Slug": "butlan-mutlak-nispi",
+    "Letter": "B",
+    "Definition": "Hukuka aykırılık nedeniyle sözleşmenin geçersizliğidir. Mutlak butlanda sözleşme baştan itibaren hükümsüzdür; nispi butlanda iptal hakkı vardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 45,
+    "Title": "Cebri icra",
+    "Slug": "cebri-icra",
+    "Letter": "C",
+    "Definition": "Mahkeme kararlarının veya ilamsız alacakların devlet zoruyla yerine getirilmesidir. İcra daireleri aracılığıyla yürütülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 46,
+    "Title": "Cebri satış",
+    "Slug": "cebri-satis",
+    "Letter": "C",
+    "Definition": "Haczedilen malın para çevrilmesi için icra yoluyla açık artırma usulüyle satılmasıdır. Elde edilen bedelden alacaklılar sıraya göre tatmin edilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 47,
+    "Title": "Ceza muhakemesi",
+    "Slug": "ceza-muhakemesi",
+    "Letter": "C",
+    "Definition": "Suç isnadı altındaki kişiler hakkında maddi gerçeği ortaya çıkarmayı amaçlayan yargılama sürecidir. Delillerin toplanması, değerlendirilmesi ve hüküm verilmesi bu çerçevede yürütülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 48,
+    "Title": "Ceza sorumluluğu",
+    "Slug": "ceza-sorumlulugu",
+    "Letter": "C",
+    "Definition": "Kişinin işlediği fiil nedeniyle ceza yaptırımına tabi tutulabilmesi için aranan hukuki sorumluluktur. Kusur yeteneği, kast/taksir ve hukuka aykırılık temel unsurlardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 49,
+    "Title": "Celse",
+    "Slug": "celse",
+    "Letter": "C",
+    "Definition": "Duruşmanın belirli bir gün ve saatte yapılan oturumudur. Delillerin tartışılması ve taraf beyanları celselerde alınır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 50,
+    "Title": "Cezanın ertelenmesi",
+    "Slug": "cezanin-ertelenmesi",
+    "Letter": "C",
+    "Definition": "Belirli şartların varlığında hükmedilen hapis cezasının cezaevinde infazının ertelenmesidir. Sanığın denetim süresinde suç işlememesi beklenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 51,
+    "Title": "CMK (Ceza Muhakemesi Kanunu)",
+    "Slug": "cmk-ceza-muhakemesi-kanunu",
+    "Letter": "C",
+    "Definition": "Ceza yargılamasının usul kurallarını düzenleyen temel kanundur. Soruşturma ve kovuşturma evrelerindeki tüm işlemler bu kanuna göre yürütülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 52,
+    "Title": "Cumhuriyet savcısı",
+    "Slug": "cumhuriyet-savcisi",
+    "Letter": "C",
+    "Definition": "Kamu adına soruşturmayı yürüten ve iddia makamını temsil eden yargı mensubudur. Kamu davasını açar ve duruşmada mütalaa verir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 53,
+    "Title": "Çap (tapu)",
+    "Slug": "cap-tapu",
+    "Letter": "Ç",
+    "Definition": "Taşınmazın sınır ve yüzölçümünü gösteren resmi belgedir. Tescil işlemlerinde ve imar uygulamalarında esas alınır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 54,
+    "Title": "Çekişmeli yargı",
+    "Slug": "cekismeli-yargi",
+    "Letter": "Ç",
+    "Definition": "Taraflar arasında uyuşmazlık bulunan ve mahkemenin hüküm verdiği yargı türüdür. Delillerin karşılıklı ileri sürülmesi ve tartışılması esastır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 55,
+    "Title": "Çekişmesiz yargı",
+    "Slug": "cekismesiz-yargi",
+    "Letter": "Ç",
+    "Definition": "Taraflar arasında uyuşmazlık bulunmayan, mahkemeden hukuki bir durumun tespiti veya düzenlenmesinin istendiği yargı türüdür. Vesayet işleri buna örnektir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 56,
+    "Title": "Çelişmeli yargılama ilkesi",
+    "Slug": "celismeli-yargilama-ilkesi",
+    "Letter": "Ç",
+    "Definition": "Tarafların delil ve iddialarını birbirlerinin huzurunda tartışabilmesini ifade eder. Adil yargılanma hakkının temel unsurlarındandır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 57,
+    "Title": "Çevresel etki değerlendirmesi (ÇED)",
+    "Slug": "cevresel-etki-degerlendirmesi-ced",
+    "Letter": "Ç",
+    "Definition": "Proje ve faaliyetlerin çevreye muhtemel etkilerinin önceden analiz edilmesi sürecidir. Hukuki izin ve denetim mekanizmalarının önemli bir parçasıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 58,
+    "Title": "Danıştay",
+    "Slug": "danistay",
+    "Letter": "D",
+    "Definition": "İdari yargı kolunun en yüksek mahkemesidir. İdari işlemlerin hukuka uygunluğunu denetler ve içtihat birliği sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 59,
+    "Title": "Dava",
+    "Slug": "dava",
+    "Letter": "D",
+    "Definition": "Mahkemeden hukuki korunma talebinde bulunma yoludur. Davacı, hakkının ihlal edildiğini ileri sürerek hüküm ister.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 60,
+    "Title": "Davacı / Davalı",
+    "Slug": "davaci-davali",
+    "Letter": "D",
+    "Definition": "Davayı açan taraf davacı; kendisine karşı dava açılan taraf ise davalıdır. Taraf sıfatı usul işlemlerinin kime ait olduğunu belirler.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 61,
+    "Title": "Dava şartı arabuluculuk",
+    "Slug": "dava-sarti-arabuluculuk",
+    "Letter": "D",
+    "Definition": "Kanunda öngörülen bazı uyuşmazlıklarda, dava açmadan önce arabulucuya başvurulmasını zorunlu kılan kurumdur. Başvurulmazsa dava usulden reddedilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 62,
+    "Title": "Dava şartı yokluğu",
+    "Slug": "dava-sarti-yoklugu",
+    "Letter": "D",
+    "Definition": "Bir davanın görülebilmesi için gereken zorunlu koşulların bulunmaması halidir. Mahkeme, şart yokluğunu resen gözetir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 63,
+    "Title": "Delil",
+    "Slug": "delil",
+    "Letter": "D",
+    "Definition": "Uyuşmazlığın çözümünde maddi gerçeği ortaya koymaya yarayan bilgi ve belgelerdir. Tanık, bilirkişi, belge ve uzman raporu başlıca delil türleridir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 64,
+    "Title": "Delil tespiti",
+    "Slug": "delil-tespiti",
+    "Letter": "D",
+    "Definition": "Davanın açılmasından önce veya sonra delillerin kaybolmasını önlemek için mahkeme tarafından yapılan tespit işlemidir. İleriye dönük ispat kolaylığı sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 65,
+    "Title": "Derdestlik",
+    "Slug": "derdestlik",
+    "Letter": "D",
+    "Definition": "Aynı dava konusunun ve tarafların başka bir mahkemede görülmekte olmasıdır. İkinci dava derdestlik nedeniyle reddedilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 66,
+    "Title": "Dernek",
+    "Slug": "dernek",
+    "Letter": "D",
+    "Definition": "Gerçek veya tüzel kişilerin ortak amaç için oluşturdukları tüzel kişiliktir. Tüzükle yönetilir ve dernekler hukuku kurallarına tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 67,
+    "Title": "Devre tatil sözleşmesi",
+    "Slug": "devre-tatil-sozlesmesi",
+    "Letter": "D",
+    "Definition": "Belirli dönemlerde kullanım hakkı sağlayan ve tüketiciyi koruyucu özel hükümlere tabi sözleşme türüdür. Cayma hakkı ve bilgilendirme yükümlülükleri önem taşır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 68,
+    "Title": "Disiplin cezası",
+    "Slug": "disiplin-cezasi",
+    "Letter": "D",
+    "Definition": "Kamu personeli veya meslek mensuplarının düzeni bozucu fiilleri için uygulanan idari yaptırımdır. Uyarma, kınama, aylıktan kesme gibi türleri vardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 69,
+    "Title": "Duruşma",
+    "Slug": "durusma",
+    "Letter": "D",
+    "Definition": "Tarafların ve tanıkların dinlendiği, delillerin tartışıldığı yargılamanın sözlü bölümüdür. Tutanağa bağlanır ve aleniyet kuralına tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 70,
+    "Title": "Düşme",
+    "Slug": "dusme",
+    "Letter": "D",
+    "Definition": "Davayı veya ceza kovuşturmasını sona erdiren usul işlemidir. Şikâyetten vazgeçme, zamanaşımı veya ölüm gibi nedenlerle ortaya çıkar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 71,
+    "Title": "Ecrimisil",
+    "Slug": "ecrimisil",
+    "Letter": "E",
+    "Definition": "Taşınmazın haksız işgalinden kaynaklanan tazminattır. Fiili kullanım karşılığı olarak işgalci tarafından malikine ödenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 72,
+    "Title": "Eda davası",
+    "Slug": "eda-davasi",
+    "Letter": "E",
+    "Definition": "Davalının belirli bir edimi yerine getirmesini konu alan davadır. Para borcunun ödenmesi talebi buna örnektir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 73,
+    "Title": "Ehliyet (hak/fiil/dava ehliyeti)",
+    "Slug": "ehliyet-hak-fiil-dava-ehliyeti",
+    "Letter": "E",
+    "Definition": "Kişinin haklara ve borçlara ehil olma, işlem yapabilme ve davada taraf olabilme yetilerini ifade eder. Yaş, ayırt etme gücü ve kısıtlılık durumları belirleyicidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 74,
+    "Title": "El atmanın önlenmesi",
+    "Slug": "el-atmanin-onlenmesi",
+    "Letter": "E",
+    "Definition": "Malik olmayanların taşınmaz üzerindeki haksız müdahalesinin durdurulmasını konu alan davadır. Mülkiyet hakkının korunmasına hizmet eder.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 75,
+    "Title": "Elektronik tebligat",
+    "Slug": "elektronik-tebligat",
+    "Letter": "E",
+    "Definition": "Usule uygun şekilde elektronik ortamdan yapılan bildirimdir. Tebligat Kanunu’na göre belirli kişi ve kurumlar için zorunludur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 76,
+    "Title": "Emekli ikramiyesi",
+    "Slug": "emekli-ikramiyesi",
+    "Letter": "E",
+    "Definition": "Kamu görevlilerine hizmet süreleri karşılığında emeklilikte ödenen toplu paradır. Hesaplama usulleri özel mevzuata tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 77,
+    "Title": "Emredici hüküm",
+    "Slug": "emredici-hukum",
+    "Letter": "E",
+    "Definition": "Tarafların aksini kararlaştıramayacağı, uyulması zorunlu hukuk kuralıdır. Aykırılık halinde sözleşme hükümsüz sayılabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 78,
+    "Title": "Emsal karar",
+    "Slug": "emsal-karar",
+    "Letter": "E",
+    "Definition": "Benzer uyuşmazlıklarda yol gösterici nitelikteki mahkeme kararıdır. İçtihat birliği ve öngörülebilirlik için önem taşır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 79,
+    "Title": "En az müdahale ilkesi",
+    "Slug": "en-az-mudahale-ilkesi",
+    "Letter": "E",
+    "Definition": "Tedbirlerin kişilerin hak ve özgürlüklerini asgari ölçüde sınırlayacak şekilde uygulanmasını emreder. Ölçülülük ilkesinin yansımasıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 80,
+    "Title": "Esas hakkında karar",
+    "Slug": "esas-hakkinda-karar",
+    "Letter": "E",
+    "Definition": "Mahkemenin uyuşmazlığın özüne ilişkin verdiği nihai karardır. Usulden ret kararlarından ayrılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 81,
+    "Title": "Eski hâle iade",
+    "Slug": "eski-hale-iade",
+    "Letter": "E",
+    "Definition": "Mazeret nedeniyle kaçırılan yargısal sürenin yeniden işlemeye başlamasını sağlayan kurumdur. Süresinde ve gerekçesiyle talep edilmelidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 82,
+    "Title": "Eşya hukuku",
+    "Slug": "esya-hukuku",
+    "Letter": "E",
+    "Definition": "Eşya üzerindeki ayni hakları ve bu hakların korunmasını düzenleyen hukuk dalıdır. Mülkiyet, zilyetlik ve sınırlı ayni haklar başlıca konulardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 83,
+    "Title": "Faiz (akdi/temerrüt/yasal)",
+    "Slug": "faiz-akdi-temerrut-yasal",
+    "Letter": "F",
+    "Definition": "Borç para kullanımının karşılığı veya gecikmenin yaptırımı olarak hesaplanan tutardır. Türüne göre sözleşme, yasa veya temerrütten doğar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 84,
+    "Title": "Fark tazminatı",
+    "Slug": "fark-tazminati",
+    "Letter": "F",
+    "Definition": "Ödenmesi gereken ile ödenen arasında kalan eksik tutarın tazmini talebidir. İş hukukunda ücret farklarıyla sıkça gündeme gelir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 85,
+    "Title": "Fesih (haklı/geçerli)",
+    "Slug": "fesih-hakli-gecerli",
+    "Letter": "F",
+    "Definition": "Sözleşmenin taraflardan biri tarafından sona erdirilmesidir. Haklı fesih derhal; geçerli fesih ise belirli koşullarla ileriye etkili sonuç doğurur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 86,
+    "Title": "Fikri ve sınai mülkiyet",
+    "Slug": "fikri-ve-sinai-mulkiyet",
+    "Letter": "F",
+    "Definition": "Eserler, buluşlar, markalar ve tasarımlar üzerindeki koruma rejimini ifade eder. Hak sahiplerine tekel niteliğinde yetkiler sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 87,
+    "Title": "Fiil ehliyeti",
+    "Slug": "fiil-ehliyeti",
+    "Letter": "F",
+    "Definition": "Kişinin kendi fiilleriyle hak ve borç doğurabilme yeteneğidir. Ayırt etme gücü ve erginlik temel ölçütlerdir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 88,
+    "Title": "Fuzuli işgal",
+    "Slug": "fuzuli-isgal",
+    "Letter": "F",
+    "Definition": "Taşınmazın malikinin rızası olmaksızın kullanılmasıdır. Ecrimisil ve tahliye yaptırımları gündeme gelir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 89,
+    "Title": "Gaiplik",
+    "Slug": "gaiplik",
+    "Letter": "G",
+    "Definition": "Uzun süredir kendisinden haber alınamayan kişinin mahkeme kararıyla kayıp sayılmasıdır. Miras ve evlilik gibi alanlarda sonuç doğurur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 90,
+    "Title": "Gasp",
+    "Slug": "gasp",
+    "Letter": "G",
+    "Definition": "Bir malın zilyedinden cebir veya tehdit kullanılarak alınmasıdır. Ceza hukuku bakımından ağır yaptırımlara tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 91,
+    "Title": "Geçici hukuki koruma",
+    "Slug": "gecici-hukuki-koruma",
+    "Letter": "G",
+    "Definition": "Davanın sonucunu güvence altına almak için verilen ihtiyati tedbir ve ihtiyati haciz gibi önlemlerdir. Hak kayıplarını önlemeyi amaçlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 92,
+    "Title": "Gecikmesinde sakınca bulunan hâl",
+    "Slug": "gecikmesinde-sakinca-bulunan-hal",
+    "Letter": "G",
+    "Definition": "Derhal işlem yapılmadığında telafisi güç zararların doğacağı durumları ifade eder. Hâkim kararı olmaksızın da bazı acil tedbirler alınabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 93,
+    "Title": "Gerekçe",
+    "Slug": "gerekce",
+    "Letter": "G",
+    "Definition": "Mahkeme kararının hangi hukuki ve fiili nedenlerle verildiğini açıklayan bölümdür. Denetlenebilirlik ve adil yargılanma için zorunludur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 94,
+    "Title": "Görev",
+    "Slug": "gorev",
+    "Letter": "G",
+    "Definition": "Uyuşmazlığın türüne göre hangi yargı kolu ve mahkemenin bakacağını belirleyen kurallardır. Görev kamu düzenindendir ve resen gözetilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 95,
+    "Title": "Görevsizlik",
+    "Slug": "gorevsizlik",
+    "Letter": "G",
+    "Definition": "Mahkemenin uyuşmazlıkta görevli olmadığını tespit ederek dosyayı görevli mahkemeye göndermesidir. Usul ekonomisi gereği ilk aşamada incelenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 96,
+    "Title": "Görevsizlik/Yetkisizlik kararı",
+    "Slug": "gorevsizlik-yetkisizlik-karari",
+    "Letter": "G",
+    "Definition": "Mahkemenin görev veya yetki yönünden kendisini uygun görmeyerek davayı ilgili mahkemeye tevdi etmesidir. Süreler ve harçlar açısından özel sonuçlar doğurur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 97,
+    "Title": "Gözaltı",
+    "Slug": "gozalti",
+    "Letter": "G",
+    "Definition": "Şüpheli kişinin soruşturma kapsamında geçici süreyle özgürlüğünün kısıtlanmasıdır. Süre, hakim denetimi ve hakların bildirimi kanunla sıkı şekilde düzenlenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 98,
+    "Title": "Gıyabi karar",
+    "Slug": "giyabi-karar",
+    "Letter": "G",
+    "Definition": "Taraflardan birinin yokluğunda verilen karardır. Tebliğ ve itiraz/kanun yolu hakları saklıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 99,
+    "Title": "HAGB (Hükmün açıklanmasının geri bırakılması)",
+    "Slug": "hagb-hukmun-aciklanmasinin-geri-birakilmasi",
+    "Letter": "H",
+    "Definition": "Belirli koşullarda mahkûmiyet hükmünün açıklanmayarak denetim süresine bırakılmasıdır. Süre iyi hâlli geçirilirse hüküm ortadan kalkar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 100,
+    "Title": "Hâkim",
+    "Slug": "hakim",
+    "Letter": "H",
+    "Definition": "Yargılama faaliyetini yürüten ve uyuşmazlığı karara bağlayan yargı mensubudur. Bağımsızlık ve tarafsızlık ilkeleriyle görev yapar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 101,
+    "Title": "Hak düşürücü süre",
+    "Slug": "hak-dusurucu-sure",
+    "Letter": "H",
+    "Definition": "Belirli sürede kullanılmayan hakkın sona ermesine yol açan kesin süredir. Hakim tarafından re’sen gözetilir; durma-kesilme hükümleri uygulanmaz.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 102,
+    "Title": "Hakkın kötüye kullanılması yasağı",
+    "Slug": "hakkin-kotuye-kullanilmasi-yasagi",
+    "Letter": "H",
+    "Definition": "Bir hakkın objektif iyi niyet kurallarına aykırı şekilde kullanılmasını hukuk düzeni korumaz. Hakkın amacını aşan kullanım engellenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 103,
+    "Title": "Haksız fiil",
+    "Slug": "haksiz-fiil",
+    "Letter": "H",
+    "Definition": "Hukuka aykırı ve kusurlu davranışla başkasına zarar verilmesidir. Tazmin sorumluluğu doğurur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 104,
+    "Title": "Haksız tahrik",
+    "Slug": "haksiz-tahrik",
+    "Letter": "H",
+    "Definition": "Failin haksız bir eylemin etkisiyle suç işlemesi halinde cezada indirim yapılmasını öngören ceza hukuku kurumudur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 105,
+    "Title": "Hakem / Tahkim",
+    "Slug": "hakem-tahkim",
+    "Letter": "H",
+    "Definition": "Tarafların uyuşmazlığı devlet yargısı dışında, seçtikleri hakemler önünde çözdükleri yoldur. Tahkim şartı/klozu ile yetki belirlenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 106,
+    "Title": "Hapis hakkı",
+    "Slug": "hapis-hakki",
+    "Letter": "H",
+    "Definition": "Alacaklının borçlunun malını iade etmeyi alacağın ödenmesine bağlamasına imkân veren haktır. Özellikle taşıma ve eser sözleşmelerinde görülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 107,
+    "Title": "Hapis cezası",
+    "Slug": "hapis-cezasi",
+    "Letter": "H",
+    "Definition": "Özgürlüğü bağlayıcı ceza türüdür. Süresi ve infaz usulleri ceza mevzuatında düzenlenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 108,
+    "Title": "Hazine alacağı",
+    "Slug": "hazine-alacagi",
+    "Letter": "H",
+    "Definition": "Devlete ait vergi, harç, para cezası ve benzeri kamu alacaklarıdır. Takibi özel usullere tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 109,
+    "Title": "HSK (Hâkimler ve Savcılar Kurulu)",
+    "Slug": "hsk-hakimler-ve-savcilar-kurulu",
+    "Letter": "H",
+    "Definition": "Hâkim ve savcıların atama, terfi ve disiplin işlemlerinden sorumlu kuruluştur. Yargı bağımsızlığının kurumsal güvencelerindendir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 110,
+    "Title": "Hüküm fıkrası",
+    "Slug": "hukum-fikrasi",
+    "Letter": "H",
+    "Definition": "Mahkeme kararının bağlayıcı sonuç kısmıdır. İcra ve infaz işlemleri bu kısma göre yürütülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 111,
+    "Title": "Hükmün kesinleşmesi",
+    "Slug": "hukmun-kesinlesmesi",
+    "Letter": "H",
+    "Definition": "Kararın olağan kanun yollarının tüketilmesi veya süresinde başvurulmamasıyla değişmez hale gelmesidir. Kesinleşme şerhi icra için önemlidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 112,
+    "Title": "İade-i muhakeme (yargılamanın yenilenmesi)",
+    "Slug": "iade-i-muhakeme-yargilamanin-yenilenmesi",
+    "Letter": "İ",
+    "Definition": "Kesinleşmiş kararların hukuka uygunluk denetimi dışında olağanüstü bir yolla yeniden görülmesidir. Sınırlı sebeplere dayanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 113,
+    "Title": "İbra",
+    "Slug": "ibra",
+    "Letter": "İ",
+    "Definition": "Alacaklının borçluyu borçtan kısmen veya tamamen kurtarmasıdır. İspat kolaylığı için yazılı yapılması tercih edilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 114,
+    "Title": "İcra dairesi",
+    "Slug": "icra-dairesi",
+    "Letter": "İ",
+    "Definition": "Cebrî icra işlemlerini yürüten idari birimdir. Takibin başlatılması, haciz ve satış işlemleri burada yapılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 115,
+    "Title": "İcra emri",
+    "Slug": "icra-emri",
+    "Letter": "İ",
+    "Definition": "Borçluya borcunu ödemesi veya itiraz etmesi için gönderilen resmi bildiridir. Süresinde gereği yapılmazsa hacze geçilebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 116,
+    "Title": "İcra inkâr tazminatı",
+    "Slug": "icra-inkar-tazminati",
+    "Letter": "İ",
+    "Definition": "Haksız itirazla alacaklının takibini durduran borçludan, belirli oranlarda hükmedilen tazminattır. Kötü niyetli itirazları caydırmayı amaçlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 117,
+    "Title": "İcra mahkemesi",
+    "Slug": "icra-mahkemesi",
+    "Letter": "İ",
+    "Definition": "İcra takiplerinden doğan şikâyet ve itirazları inceleyen özel mahkemedir. Kararları kural olarak kesindir; bazıları kanun yoluna tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 118,
+    "Title": "İcra takibi (ilamlı/ilamsız)",
+    "Slug": "icra-takibi-ilamli-ilamsiz",
+    "Letter": "İ",
+    "Definition": "Alacağın devlet zoruyla tahsili için başvurulan prosedürdür. İlamsız takipte belge aranmaz; ilamlı takip mahkeme kararına dayanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 119,
+    "Title": "İflas",
+    "Slug": "iflas",
+    "Letter": "İ",
+    "Definition": "Ticari nitelikte borçların ödenememesi halinde borçlunun tasfiyeye tabi tutulmasıdır. Tasfiye sürecinde alacaklılar sıra cetveline göre tahsil alır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 120,
+    "Title": "İhale (icra/satış)",
+    "Slug": "ihale-icra-satis",
+    "Letter": "İ",
+    "Definition": "Haczedilen malın açık artırma yoluyla satılmasıdır. Şeffaflık ve aleniyet ilkeleri geçerlidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 121,
+    "Title": "İhtiyati haciz",
+    "Slug": "ihtiyati-haciz",
+    "Letter": "İ",
+    "Definition": "Para alacakları için borçlunun mallarına geçici olarak el konulması tedbiridir. Alacağın riske girmesi halinde uygulanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 122,
+    "Title": "İhtiyati tedbir",
+    "Slug": "ihtiyati-tedbir",
+    "Letter": "İ",
+    "Definition": "Davanın sonucunu korumak için verilen geçici hukuki koruma önlemidir. Telafisi güç zararları önlemeyi hedefler.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 123,
+    "Title": "İhtirazî kayıt",
+    "Slug": "ihtirazi-kayit",
+    "Letter": "İ",
+    "Definition": "Ödeme veya işlem yapılırken hakların saklı tutulduğunu gösteren şerhtir. Sonradan itiraz yolunu açık tutar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 124,
+    "Title": "İktisap (kazandırıcı)",
+    "Slug": "iktisap-kazandirici",
+    "Letter": "İ",
+    "Definition": "Bir hakkın hukuki işlem, zamanaşımı veya karine ile kazanılmasıdır. Taşınmazlarda tescil ilkesi önem taşır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 125,
+    "Title": "İmza inkârı",
+    "Slug": "imza-inkari",
+    "Letter": "İ",
+    "Definition": "Belgedeki imzanın kişiye ait olmadığı yönündeki itirazdır. İnceleme, bilirkişi ve karşılaştırma yöntemleriyle yapılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 126,
+    "Title": "İntifa hakkı",
+    "Slug": "intifa-hakki",
+    "Letter": "İ",
+    "Definition": "Başkasına ait bir şeyden tam yararlanma yetkisi veren sınırlı ayni haktır. Mülkiyet devredilmez; kullanım ve semereler hak sahibine aittir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 127,
+    "Title": "İsticvap (tarafın dinlenmesi)",
+    "Slug": "isticvap-tarafin-dinlenmesi",
+    "Letter": "İ",
+    "Definition": "Tarafın mahkeme huzurunda doğrudan sorulara cevap vermesi için çağrılmasıdır. Çelişmeli yargılama ilkesini güçlendirir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 128,
+    "Title": "İstinaf",
+    "Slug": "istinaf",
+    "Letter": "İ",
+    "Definition": "İlk derece mahkemesi kararlarının bölge adliye/idarî mahkemelerinde hem hukuk hem vakıa yönünden incelenmesidir. Temyizden farklı olarak delil değerlendirmesi yapılabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 129,
+    "Title": "İstirdat davası",
+    "Slug": "istirdat-davasi",
+    "Letter": "İ",
+    "Definition": "Haksız olarak ödenen bedelin geri alınması için açılan davadır. Özellikle icra takibinde haksız tahsilatlar için başvurulur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 130,
+    "Title": "İstihkak davası",
+    "Slug": "istihkak-davasi",
+    "Letter": "İ",
+    "Definition": "Haczedilen malın aslında üçüncü kişiye ait olduğunun tespiti için açılan davadır. Mülkiyet hakkının korunmasını sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 131,
+    "Title": "İyi niyet",
+    "Slug": "iyi-niyet",
+    "Letter": "İ",
+    "Definition": "Hukuki ilişkide dürüst ve makul davranma halidir. Tescile güven, kazanımın korunması gibi alanlarda koruma sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 132,
+    "Title": "İştirak nafakası",
+    "Slug": "istirak-nafakasi",
+    "Letter": "İ",
+    "Definition": "Boşanma veya ayrılık sonrası çocuğun bakım giderlerine katılmak için hükmedilen nafakadır. Çocuğun yararı esastır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 133,
+    "Title": "Jus cogens (emredici uluslararası norm)",
+    "Slug": "jus-cogens-emredici-uluslararasi-norm",
+    "Letter": "J",
+    "Definition": "Devletlerin anlaşmalarla dahi aykırı davranamayacağı, üstün nitelikteki uluslararası hukuk kurallarıdır. Soykırım yasağı bu kapsamdadır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 134,
+    "Title": "Kadastro",
+    "Slug": "kadastro",
+    "Letter": "K",
+    "Definition": "Taşınmazların sınır, nitelik ve maliklerinin belirlenerek tapu siciline esas olacak şekilde haritalanmasıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 135,
+    "Title": "Kabul beyanı",
+    "Slug": "kabul-beyani",
+    "Letter": "K",
+    "Definition": "Teklifin muhatabı tarafından aynen kabul edilmesiyle sözleşmenin kurulmasını sağlayan irade açıklamasıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 136,
+    "Title": "Kamulaştırma",
+    "Slug": "kamulastirma",
+    "Letter": "K",
+    "Definition": "Kamu yararı amacıyla özel mülkiyetteki taşınmazın bedeli peşin ödenerek idarece mülkiyetine geçirilmesidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 137,
+    "Title": "Kamulaştırmasız el atma",
+    "Slug": "kamulastirmasiz-el-atma",
+    "Letter": "K",
+    "Definition": "İdarenin kamulaştırma yapmadan fiilen taşınmaza müdahalesidir. Tazminat veya iade davalarına konu olur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 138,
+    "Title": "Kan gütme saiki",
+    "Slug": "kan-gutme-saiki",
+    "Letter": "K",
+    "Definition": "Ceza hukukunda cezada artırım sebebi olabilen özel kast türüdür. Aile içi husumetten kaynaklanan eylemlerde gündeme gelir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 139,
+    "Title": "Kanun boşluğu",
+    "Slug": "kanun-boslugu",
+    "Letter": "K",
+    "Definition": "Hukuki uyuşmazlığı doğrudan düzenleyen normun bulunmamasıdır. Hakim, kıyas ve genel ilkelerle boşluğu doldurur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 140,
+    "Title": "Kanun yararına bozma",
+    "Slug": "kanun-yararina-bozma",
+    "Letter": "K",
+    "Definition": "Kesinleşmiş kararların hukuka aykırılığının giderilmesi için, taraflara etkisi olmaksızın yapılan olağanüstü kanun yoludur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 141,
+    "Title": "Kanun yolu (itiraz/istinaf/temyiz)",
+    "Slug": "kanun-yolu-itiraz-istinaf-temyiz",
+    "Letter": "K",
+    "Definition": "Mahkeme kararlarının üst mercilerde denetlenmesini sağlayan başvuru yollarıdır. Süre ve usul şartları titizlikle aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 142,
+    "Title": "Kanunilik ilkesi",
+    "Slug": "kanunilik-ilkesi",
+    "Letter": "K",
+    "Definition": "Suç ve cezaların kanunla belirlenmesini ve geriye yürümezliği ifade eder. Ceza hukuku güvenliğinin temel dayanağıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 143,
+    "Title": "Kapalı yargılama (gizlilik)",
+    "Slug": "kapali-yargilama-gizlilik",
+    "Letter": "K",
+    "Definition": "Belirli hallerde duruşmanın aleniyetten çıkarılarak kapalı yapılmasıdır. Özel hayatın gizliliği ve kamu düzeni gerekçeleriyle sınırlandırılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 144,
+    "Title": "Kambiyo senedi (çek/senet/poliçe)",
+    "Slug": "kambiyo-senedi-cek-senet-police",
+    "Letter": "K",
+    "Definition": "Para borcunu temsil eden ve sıkı şekil şartlarına tabi kıymetli evraklardır. Hızlı takip imkânı sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 145,
+    "Title": "Kambiyo takibi",
+    "Slug": "kambiyo-takibi",
+    "Letter": "K",
+    "Definition": "Kambiyo senetlerine özgü, daha kısa sürede sonuç alınmasını amaçlayan icra takip yoludur. İtiraz ve şikâyet süreleri kısadır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 146,
+    "Title": "Kat karşılığı inşaat sözleşmesi",
+    "Slug": "kat-karsiligi-insaat-sozlesmesi",
+    "Letter": "K",
+    "Definition": "Arsa sahibinin pay devri karşılığında yüklenicinin bina yapmayı üstlendiği karma sözleşmedir. Şekil, tescil ve teminat hükümleri büyük önem taşır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 147,
+    "Title": "Kayıt ve tescil",
+    "Slug": "kayit-ve-tescil",
+    "Letter": "K",
+    "Definition": "Hakların resmi sicillere işlenerek üçüncü kişilere karşı ileri sürülebilir hale gelmesidir. Tapu sicili taşınmaz haklarında kurucu etki yaratabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 148,
+    "Title": "Kefalet (adi/müteselsil)",
+    "Slug": "kefalet-adi-muteselsil",
+    "Letter": "K",
+    "Definition": "Borçlunun borcunu ödememesine karşı üçüncü kişinin sorumluluk üstlenmesidir. Müteselsil kefalette alacaklı doğrudan kefile yönelebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 149,
+    "Title": "Kıdem tazminatı",
+    "Slug": "kidem-tazminati",
+    "Letter": "K",
+    "Definition": "Belirli şartlarla iş sözleşmesi sona eren işçiye, çalışma süresine göre ödenen tazminattır. Tavan, kıdem ve fesih nedeni hesaplamada belirleyicidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 150,
+    "Title": "Kira sözleşmesi (konut/işyeri)",
+    "Slug": "kira-sozlesmesi-konut-isyeri",
+    "Letter": "K",
+    "Definition": "Kiraya verenin kullanım hakkını devrettiği, kiracının bedel ödediği sözleşmedir. Tahliye, artış oranı ve depozito özel kurallara tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 151,
+    "Title": "Kişisel başvuru (AYM)",
+    "Slug": "kisisel-basvuru-aym",
+    "Letter": "K",
+    "Definition": "Temel hak ihlallerinin iç hukuk yolları tüketildikten sonra Anayasa Mahkemesine taşınmasıdır. Kabul edilebilirlik koşulları sıkıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 152,
+    "Title": "Kişisel verilerin korunması",
+    "Slug": "kisisel-verilerin-korunmasi",
+    "Letter": "K",
+    "Definition": "Kimliği belirli veya belirlenebilir kişiye ilişkin verilerin işlenmesinde hukuka uygunluk ve güvenlik yükümlülüklerini içerir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 153,
+    "Title": "Kişilik hakkı",
+    "Slug": "kisilik-hakki",
+    "Letter": "K",
+    "Definition": "Kişinin şeref, haysiyet, özel hayat, ad ve resim gibi değerler üzerindeki mutlak hakkıdır. Hukuka aykırı saldırılara karşı korunur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 154,
+    "Title": "Kovuşturma",
+    "Slug": "kovusturma",
+    "Letter": "K",
+    "Definition": "Kamu davasının açılmasından hükmün kesinleşmesine kadar süren ceza yargılaması evresidir. Duruşma bu evrenin merkezindedir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 155,
+    "Title": "Kovuşturmaya yer olmadığı kararı (KYOK)",
+    "Slug": "kovusturmaya-yer-olmadigi-karari-kyok",
+    "Letter": "K",
+    "Definition": "Savcının, yeterli şüphe bulunmadığı için kamu davası açmamasıdır. İtiraz yolu kanunda düzenlenmiştir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 156,
+    "Title": "Kredi sözleşmesi",
+    "Slug": "kredi-sozlesmesi",
+    "Letter": "K",
+    "Definition": "Finans kuruluşunun belirli limit ve koşullarla kredi tahsis ettiği sözleşmedir. Teminat, faiz ve geri ödeme planı esastır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 157,
+    "Title": "KTK (Karayolları Trafik Kanunu)",
+    "Slug": "ktk-karayollari-trafik-kanunu",
+    "Letter": "K",
+    "Definition": "Karayolu trafik düzeni, sürücü sorumluluğu ve tazminat hükümlerini içerir. Zorunlu mali sorumluluk sigortasıyla bağlantılıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 158,
+    "Title": "Kurumlar vergisi",
+    "Slug": "kurumlar-vergisi",
+    "Letter": "K",
+    "Definition": "Sermaye şirketlerinin kazançları üzerinden alınan vergidir. İndirim, istisna ve beyan dönemleri özel düzenlemelidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 159,
+    "Title": "Kusur",
+    "Slug": "kusur",
+    "Letter": "K",
+    "Definition": "Hukuka aykırı sonucun failin iradesine atfedilebilmesini sağlayan ölçüttür. Kast ve taksir kusurun iki temel biçimidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 160,
+    "Title": "KVK (6698 sayılı Kanun)",
+    "Slug": "kvk-6698-sayili-kanun",
+    "Letter": "K",
+    "Definition": "Kişisel verilerin korunmasına ilişkin çerçeve kanundur. Veri işleme şartları, aydınlatma ve haklar bu kanunda düzenlenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 161,
+    "Title": "Külli/temsili dava",
+    "Slug": "kulli-temsili-dava",
+    "Letter": "K",
+    "Definition": "Topluluğun tamamını ilgilendiren veya temsil yoluyla açılan davaları ifade eder. Usul ve temsil yetkisi açıkça gösterilmelidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 162,
+    "Title": "Lehe kanun",
+    "Slug": "lehe-kanun",
+    "Letter": "L",
+    "Definition": "Ceza yargılamasında sanık lehine olan kanunun uygulanmasıdır. Zaman bakımından uygulanma kurallarıyla birlikte değerlendirilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 163,
+    "Title": "Lehtar",
+    "Slug": "lehtar",
+    "Letter": "L",
+    "Definition": "Kıymetli evrakta ödeme yapılacak kişi ya da kişi lehine yapılan işlemin faydalanıcısıdır. Çek, poliçe ve senetlerde yer alır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 164,
+    "Title": "Limited şirket",
+    "Slug": "limited-sirket",
+    "Letter": "L",
+    "Definition": "Sermayesi paylara bölünmüş, ortakların sorumluluğu taahhüt ettikleri sermaye ile sınırlı şirkettir. Müdürlerce temsil olunur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 165,
+    "Title": "Lisans sözleşmesi",
+    "Slug": "lisans-sozlesmesi",
+    "Letter": "L",
+    "Definition": "Bir hakkın kullanma yetkisinin belirli şartlarla üçüncü kişiye bırakılmasıdır. Marka, patent ve yazılım alanında yaygındır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 166,
+    "Title": "Lokavt",
+    "Slug": "lokavt",
+    "Letter": "L",
+    "Definition": "Toplu iş uyuşmazlığında işverenin işi topluca durdurmasıdır. Kanuni şartlara bağlanmıştır ve iş sözleşmelerini askıya alır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 167,
+    "Title": "Mahkeme",
+    "Slug": "mahkeme",
+    "Letter": "M",
+    "Definition": "Uyuşmazlıkları hukuk kuralları çerçevesinde karara bağlayan yargı organıdır. Görev ve yetki kurallarıyla belirlenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 168,
+    "Title": "Mahkeme masrafları",
+    "Slug": "mahkeme-masraflari",
+    "Letter": "M",
+    "Definition": "Harç, tebligat, bilirkişi ve vekâlet ücreti gibi yargılama giderleridir. Haksız çıkan tarafa yükletilmesi esastır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 169,
+    "Title": "Mahkûmiyet",
+    "Slug": "mahkumiyet",
+    "Letter": "M",
+    "Definition": "Sanığın suçlu bulunarak cezaya hükmedilmesidir. Hüküm fıkrası infazın temelini oluşturur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 170,
+    "Title": "Makul süre",
+    "Slug": "makul-sure",
+    "Letter": "M",
+    "Definition": "Yargılamanın gereksiz gecikme olmaksızın yürütülmesini ifade eder. İhlal tazminat ve giderim yollarını gündeme getirebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 171,
+    "Title": "Manevi tazminat",
+    "Slug": "manevi-tazminat",
+    "Letter": "M",
+    "Definition": "Kişilik değerlerine yapılan haksız saldırı nedeniyle duyulan elem ve ıstırabın giderimi için ödenen paradır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 172,
+    "Title": "MEB hukukunda disiplin",
+    "Slug": "meb-hukukunda-disiplin",
+    "Letter": "M",
+    "Definition": "Eğitim personelinin görevle bağdaşmayan davranışlarına uygulanan yaptırımları kapsar. Usul güvenceleri esastır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 173,
+    "Title": "Mehil",
+    "Slug": "mehil",
+    "Letter": "M",
+    "Definition": "Taraflara işlemi yerine getirmeleri için verilen ek süredir. Mehil verilmesi usul ekonomisini gözetir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 174,
+    "Title": "Miras",
+    "Slug": "miras",
+    "Letter": "M",
+    "Definition": "Kişinin ölümüyle malvarlığının mirasçılarına geçmesidir. Saklı pay ve tasarruf nisabı kuralları vardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 175,
+    "Title": "Mirasçılık belgesi",
+    "Slug": "mirascilik-belgesi",
+    "Letter": "M",
+    "Definition": "Kimin mirasçı olduğunu gösteren resmi belgedir. Sulh hukuk mahkemesinden verilir ve tasarruf işlemlerinde aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 176,
+    "Title": "Mirasın reddi",
+    "Slug": "mirasin-reddi",
+    "Letter": "M",
+    "Definition": "Mirasçının mirası kabul etmemesi işlemidir. Süresi içinde yapılmazsa miras kendiliğinden kazanılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 177,
+    "Title": "Mülkiyet hakkı",
+    "Slug": "mulkiyet-hakki",
+    "Letter": "M",
+    "Definition": "Bir şey üzerinde kullanma, yararlanma ve tasarruf yetkisi veren temel haktır. Kamu yararı gerekçesiyle sınırlanabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 178,
+    "Title": "Müsadere",
+    "Slug": "musadere",
+    "Letter": "M",
+    "Definition": "Suçla bağlantılı eşya veya kazancın devlete geçirilmesidir. Orantılılık ve mahkeme kararı gerektirir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 179,
+    "Title": "Müşterek (paylı) mülkiyet",
+    "Slug": "musterek-payli-mulkiyet",
+    "Letter": "M",
+    "Definition": "Bir şeyin belirli paylarla birden fazla kişinin mülkiyetinde bulunmasıdır. Tasarruf işlemleri pay oranlarına göre yapılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 180,
+    "Title": "Müteselsil sorumluluk",
+    "Slug": "muteselsil-sorumluluk",
+    "Letter": "M",
+    "Definition": "Birden çok borçlunun borcun tamamından birlikte sorumlu olmasıdır. Alacaklı dilediğine başvurabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 181,
+    "Title": "Muvazaa",
+    "Slug": "muvazaa",
+    "Letter": "M",
+    "Definition": "Tarafların üçüncü kişileri aldatmak amacıyla görünürde işlem yapmalarıdır. Gizli işlem hükümleri ve iptal gündeme gelebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 182,
+    "Title": "Müdafi",
+    "Slug": "mudafi",
+    "Letter": "M",
+    "Definition": "Ceza yargılamasında sanığın haklarını koruyan avukattır. Zorunlu müdafilik hallerinde baro tarafından atanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 183,
+    "Title": "Müdahale (fer’i/asıl)",
+    "Slug": "mudahale-feri-asil",
+    "Letter": "M",
+    "Definition": "Üçüncü kişinin görülmekte olan davaya menfaat nedeniyle katılmasıdır. Fer’i müdahil tarafı destekler; asıl müdahil bağımsız talepte bulunur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 184,
+    "Title": "Mühür bozma",
+    "Slug": "muhur-bozma",
+    "Letter": "M",
+    "Definition": "Resmi mühürle kapatılan yere izinsiz girme veya mührü kaldırma fiilidir. Ceza hukuku kapsamında yaptırıma tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 185,
+    "Title": "Nafaka (tedbir/iştirak/yoksulluk)",
+    "Slug": "nafaka-tedbir-istirak-yoksulluk",
+    "Letter": "N",
+    "Definition": "Aile hukukunda geçim desteği için hükmedilen parasal yükümlülüktür. Türüne göre koşullar ve süre değişir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 186,
+    "Title": "Noter",
+    "Slug": "noter",
+    "Letter": "N",
+    "Definition": "Resmi senet düzenleme, tasdik ve tescil işlemlerini yapan kamu görevlisidir. İşlemlere resmiyet ve ispat kolaylığı sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 187,
+    "Title": "Nüfus kaydının düzeltilmesi",
+    "Slug": "nufus-kaydinin-duzeltilmesi",
+    "Letter": "N",
+    "Definition": "Nüfus sicilindeki yanlışlıkların mahkeme kararıyla düzeltilmesidir. Ad, yaş, cinsiyet gibi kayıtlar bu kapsamdadır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 188,
+    "Title": "Nitelikli hal (ceza)",
+    "Slug": "nitelikli-hal-ceza",
+    "Letter": "N",
+    "Definition": "Suçun daha ağır cezayı gerektiren şekilde işlenmesidir. Fail, mağdur veya araç bakımından düzenlenebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 189,
+    "Title": "Nihai karar",
+    "Slug": "nihai-karar",
+    "Letter": "N",
+    "Definition": "Yargılamayı sona erdiren ve uyuşmazlığın esasını çözen karardır. Kanun yolu başvuruları bu karara yöneltilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 190,
+    "Title": "Olağan kanun yolu",
+    "Slug": "olagan-kanun-yolu",
+    "Letter": "O",
+    "Definition": "İlk derece kararlarının üst mercilerde incelenmesini sağlayan başvuru yollarıdır. İtiraz, istinaf ve temyiz olağan kanun yolları içinde sayılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 191,
+    "Title": "Olağanüstü kanun yolu",
+    "Slug": "olaganustu-kanun-yolu",
+    "Letter": "O",
+    "Definition": "Kesinleşmiş kararların hukuka uygunluk denetimi için sınırlı hallerde başvurulan yollardır. Kanun yararına bozma ve yargılamanın yenilenmesi örnektir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 192,
+    "Title": "Ölünceye kadar bakma sözleşmesi",
+    "Slug": "olunceye-kadar-bakma-sozlesmesi",
+    "Letter": "Ö",
+    "Definition": "Bakım borcu karşılığında malvarlığı devrini içeren karma sözleşmedir. Şekil şartı ve tenkis kuralları yönünden önem taşır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 193,
+    "Title": "Önalım (şufa) hakkı",
+    "Slug": "onalim-sufa-hakki",
+    "Letter": "Ö",
+    "Definition": "Paylı mülkiyette paydaşın üçüncü kişiye satılan payı aynı koşullarla satın alma yetkisidir. Süre ve usul kurallarına uyulması gerekir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 194,
+    "Title": "Örnek karar (emsal)",
+    "Slug": "ornek-karar-emsal",
+    "Letter": "Ö",
+    "Definition": "Benzer davalarda yol gösterici nitelikteki yargı kararını ifade eder. Öngörülebilirlik ve içtihat birliği sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 195,
+    "Title": "Özelleştirme",
+    "Slug": "ozellestirme",
+    "Letter": "Ö",
+    "Definition": "Kamuya ait mal veya işletmelerin özel sektöre devridir. İhale, sözleşme ve denetim süreçleri kamu hukukuna tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 196,
+    "Title": "Pay devri",
+    "Slug": "pay-devri",
+    "Letter": "P",
+    "Definition": "Şirketteki payın hukuki işlemle başka kişiye geçirilmesidir. Sözleşme ve tescil/defter kayıtlarıyla hüküm doğurur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 197,
+    "Title": "Paylı mülkiyet",
+    "Slug": "payli-mulkiyet",
+    "Letter": "P",
+    "Definition": "Bir malın belirli pay oranlarıyla birden fazla kişiye ait olmasıdır. Tasarruf ve yönetim kararları pay çoğunluğuna göre alınır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 198,
+    "Title": "Paydaşlığın giderilmesi (izale-i şuyu)",
+    "Slug": "paydasligin-giderilmesi-izale-i-suyu",
+    "Letter": "P",
+    "Definition": "Paylı mülkiyete konu malın ortaklık ilişkisine son verilerek paylaşılmasıdır. Satış veya aynen taksim yoluna gidilebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 199,
+    "Title": "Performans primi (iş hukuku)",
+    "Slug": "performans-primi-is-hukuku",
+    "Letter": "P",
+    "Definition": "Çalışanın sonuçlarına bağlı olarak ödenen ek ücrettir. Objektif kriterlere bağlanmalı ve sözleşmede açıkça düzenlenmelidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 200,
+    "Title": "Protesto (kambiyo)",
+    "Slug": "protesto-kambiyo",
+    "Letter": "P",
+    "Definition": "Ödeme veya kabulün yapılmadığının resmi tespiti işlemidir. Kambiyo senetlerinde başvuru hakkını korumak için süresinde yapılır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 201,
+    "Title": "Rehin (taşınır/taşınmaz/ipotek)",
+    "Slug": "rehin-tasinir-tasinmaz-ipotek",
+    "Letter": "R",
+    "Definition": "Alacağın teminatı olarak malvarlığı üzerinde sınırlı ayni hak kurulmasıdır. Taşınmazlarda ipotek, taşınırlarda zilyetliğin devri veya sicil tescili söz konusudur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 202,
+    "Title": "Rıza",
+    "Slug": "riza",
+    "Letter": "R",
+    "Definition": "Kişinin hukuki işlem veya müdahaleye özgür iradesiyle onay vermesidir. Geçerlilik için bilgilendirme ve ayırt etme gücü aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 203,
+    "Title": "Rücu",
+    "Slug": "rucu",
+    "Letter": "R",
+    "Definition": "Borcu ödeyen kişinin asıl sorumluya dönerek ödediğini istemesidir. Müteselsil borçluluk ve kefalette sık görülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 204,
+    "Title": "Rüçhan hakkı",
+    "Slug": "ruchan-hakki",
+    "Letter": "R",
+    "Definition": "Belirli kişiler lehine tanınan öncelikli alım veya pay edinme hakkıdır. Sermaye artırımlarında mevcut ortaklara tanınır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 205,
+    "Title": "Ruhsat (yapı/işletme)",
+    "Slug": "ruhsat-yapi-isletme",
+    "Letter": "R",
+    "Definition": "Faaliyetin mevzuata uygunluğunu gösteren idari izin belgesidir. Şartlara uyulmaması halinde iptal edilebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 206,
+    "Title": "Savcılık",
+    "Slug": "savcilik",
+    "Letter": "S",
+    "Definition": "Kamu adına soruşturmayı yürüten makamdır. Delil toplar, iddianame düzenler ve kamu davasını açar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 207,
+    "Title": "Savunma hakkı",
+    "Slug": "savunma-hakki",
+    "Letter": "S",
+    "Definition": "Kişinin iddia ve delillere karşı kendini ifade edebilme imkânıdır. Müdafi yardımı ve çelişmeli yargılama bu hakkın unsurlarıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 208,
+    "Title": "Sebepsiz zenginleşme",
+    "Slug": "sebepsiz-zenginlesme",
+    "Letter": "S",
+    "Definition": "Hukuki sebep olmaksızın birinin malvarlığının diğerinin aleyhine artmasıdır. İade yükümlülüğü doğar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 209,
+    "Title": "Sermaye şirketi",
+    "Slug": "sermaye-sirketi",
+    "Letter": "S",
+    "Definition": "Ortakların sorumluluğunun sermaye ile sınırlı olduğu şirket tipleridir. Anonim ve limited şirket başlıca örneklerdir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 210,
+    "Title": "Soruşturma",
+    "Slug": "sorusturma",
+    "Letter": "S",
+    "Definition": "Suç şüphesinin aydınlatılması için delillerin toplandığı ceza muhakemesi evresidir. Savcı tarafından yürütülür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 211,
+    "Title": "Sözleşme serbestisi",
+    "Slug": "sozlesme-serbestisi",
+    "Letter": "S",
+    "Definition": "Tarafların sözleşmenin tarafını, konusunu ve şeklini serbestçe belirleyebilmesidir. Emredici hukuk kuralları ve kamu düzeniyle sınırlıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 212,
+    "Title": "Sözleşmenin ihlali",
+    "Slug": "sozlesmenin-ihlali",
+    "Letter": "S",
+    "Definition": "Taraflardan birinin edimini gereği gibi ifa etmemesidir. Tazminat, fesih ve ifaya zorlama sonuçları doğurabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 213,
+    "Title": "Suç",
+    "Slug": "suc",
+    "Letter": "S",
+    "Definition": "Kanunda karşılığı ceza ile gösterilen hukuka aykırı fiildir. Kanunilik ve kusur ilkeleri esastır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 214,
+    "Title": "Suçüstü",
+    "Slug": "sucustu",
+    "Letter": "S",
+    "Definition": "Suçun işlenirken veya hemen sonrasında yakalanması hâlidir. Yakalama ve arama yetkileri genişler.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 215,
+    "Title": "Sulh (ceza/hukuk)",
+    "Slug": "sulh-ceza-hukuk",
+    "Letter": "S",
+    "Definition": "Tarafların uyuşmazlığı karşılıklı ödünlerle sonlandırmasıdır. Ceza yargısında uzlaştırma kurumuna benzer işlev görür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 216,
+    "Title": "Sulh ceza hâkimliği",
+    "Slug": "sulh-ceza-hakimligi",
+    "Letter": "S",
+    "Definition": "Soruşturma evresinde koruma tedbirleri ve itirazları inceleyen yargı merciidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 217,
+    "Title": "Sulh hukuk mahkemesi",
+    "Slug": "sulh-hukuk-mahkemesi",
+    "Letter": "S",
+    "Definition": "Belirli parasal sınırlar ve çekişmesiz yargı işleri gibi konularda görevli ilk derece mahkemesidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 218,
+    "Title": "Sübuta erme",
+    "Slug": "subuta-erme",
+    "Letter": "S",
+    "Definition": "Olayın delillerle sabit hale gelmesidir. Ceza yargılamasında mahkûmiyet için kesin ve inandırıcı delil aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 219,
+    "Title": "SYİ (şüpheden sanık yararlanır)",
+    "Slug": "syi-supheden-sanik-yararlanir",
+    "Letter": "S",
+    "Definition": "Şüphe hâlinde sanık lehine karar verilmesini öngören masumiyet karinesinin sonucudur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 220,
+    "Title": "Şerh",
+    "Slug": "serh",
+    "Letter": "Ş",
+    "Definition": "Tapu siciline yapılan, hakkın üçüncü kişilere karşı ileri sürülebilirliğini veya sınırlamasını gösteren kayıttır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 221,
+    "Title": "Şikâyet",
+    "Slug": "sikayet",
+    "Letter": "Ş",
+    "Definition": "Suçun kovuşturulmasını talep eden irade açıklamasıdır. Şikâyete bağlı suçlarda süresinde yapılmalıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 222,
+    "Title": "Şirketler hukuku",
+    "Slug": "sirketler-hukuku",
+    "Letter": "Ş",
+    "Definition": "Ticaret şirketlerinin kuruluşu, yönetimi ve tasfiyesini düzenleyen hukuk dalıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 223,
+    "Title": "Şufa (önalım)",
+    "Slug": "sufa-onalim",
+    "Letter": "Ş",
+    "Definition": "Paylı mülkiyette payın üçüncü kişiye satılması halinde diğer paydaşın öncelikli satın alma hakkıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 224,
+    "Title": "Tabiî hâkim güvencesi",
+    "Slug": "tabii-hakim-guvencesi",
+    "Letter": "T",
+    "Definition": "Kişinin kanunen belirlenmiş mahkemede yargılanmasını güvence altına alır. Olağanüstü mahkemelerde yargılama yasağıyla bağlantılıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 225,
+    "Title": "Tahkim",
+    "Slug": "tahkim",
+    "Letter": "T",
+    "Definition": "Tarafların uyuşmazlığı hakemler önünde çözmeyi kabul ettikleri alternatif yargı yoludur. Gizlilik ve hız avantajı sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 226,
+    "Title": "Tahkim şartı/klozu",
+    "Slug": "tahkim-sarti-klozu",
+    "Letter": "T",
+    "Definition": "Sözleşmede tarafların uyuşmazlıkları tahkimde çözeceğini öngören hükümdür. Yetki itirazı bakımından belirleyicidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 227,
+    "Title": "Tahliye (kiracı)",
+    "Slug": "tahliye-kiraci",
+    "Letter": "T",
+    "Definition": "Kiracının taşınmazı boşaltması işlemidir. Sözleşme, ihtiyaç veya tahliye taahhüdüne dayalı yollarla istenebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 228,
+    "Title": "Tahliye taahhüdü",
+    "Slug": "tahliye-taahhudu",
+    "Letter": "T",
+    "Definition": "Kiracının belirli tarihte taşınmazı boşaltmayı üstlendiği yazılı belgedir. Şekil ve tarih unsurları geçerlilik için önemlidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 229,
+    "Title": "Tapu iptali ve tescil",
+    "Slug": "tapu-iptali-ve-tescil",
+    "Letter": "T",
+    "Definition": "Hukuka aykırı tescilin iptali veya hakkın adına tescili için açılan davadır. Mülkiyet hakkının korunmasını sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 230,
+    "Title": "Tazminat (maddi/manevi)",
+    "Slug": "tazminat-maddi-manevi",
+    "Letter": "T",
+    "Definition": "Uğranılan zararın parasal giderimidir. Haksız fiil ve sözleşmeye aykırılık başlıca kaynaklardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 231,
+    "Title": "Tebligat Kanunu",
+    "Slug": "tebligat-kanunu",
+    "Letter": "T",
+    "Definition": "Yargısal ve idari bildirimlerin usul ve esaslarını düzenler. Elektronik tebligat hükümlerini de içerir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 232,
+    "Title": "Tebliğ/tefhim",
+    "Slug": "teblig-tefhim",
+    "Letter": "T",
+    "Definition": "Kararın taraflara yazılı bildirilmesi veya duruşmada sözlü olarak açıklanmasıdır. Kanun yolu süreleri buna göre başlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 233,
+    "Title": "Temerrüt",
+    "Slug": "temerrut",
+    "Letter": "T",
+    "Definition": "Borcun süresinde ifa edilmemesi hâlidir. Gecikme faizi ve zarar tazmini gündeme gelir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 234,
+    "Title": "Teminat",
+    "Slug": "teminat",
+    "Letter": "T",
+    "Definition": "Alacağın güvence altına alınması için verilen değer veya haklardır. Kefalet, rehin ve banka teminat mektubu örnektir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 235,
+    "Title": "Temlik",
+    "Slug": "temlik",
+    "Letter": "T",
+    "Definition": "Alacağın veya hakkın başka bir kişiye devridir. Yazılı şekil ve borçlunun bildirilmesi uygulamada önem taşır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 236,
+    "Title": "Temyiz",
+    "Slug": "temyiz",
+    "Letter": "T",
+    "Definition": "Bölge adliye/idarî mahkemesi kararlarının Yargıtay/Danıştay tarafından hukuk yönünden incelenmesidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 237,
+    "Title": "Tenfiz (yabancı ilam)",
+    "Slug": "tenfiz-yabanci-ilam",
+    "Letter": "T",
+    "Definition": "Yabancı mahkeme kararlarının Türkiye’de icra edilebilmesi için verilen mahkeme iznidir. Kamu düzeni ve karşılıklılık şartları aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 238,
+    "Title": "Tenkis davası",
+    "Slug": "tenkis-davasi",
+    "Letter": "T",
+    "Definition": "Saklı paya tecavüz eden tasarrufların indirimi için mirasçılarca açılan davadır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 239,
+    "Title": "Tescil",
+    "Slug": "tescil",
+    "Letter": "T",
+    "Definition": "Hakkın resmi sicile yazılmasıdır. Taşınmazlarda tescil kural olarak kurucu etki doğurur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 240,
+    "Title": "Tespit davası",
+    "Slug": "tespit-davasi",
+    "Letter": "T",
+    "Definition": "Hukuki ilişkinin veya hakkın varlığının/yokluğunun belirlenmesini isteyen davadır. İcra kabiliyeti olmasa da hukuki belirlilik sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 241,
+    "Title": "Tevdi mahalli",
+    "Slug": "tevdi-mahalli",
+    "Letter": "T",
+    "Definition": "Borçlunun edimini ifa etmek üzere bedeli yatırdığı resmi yer/kurumdur. İfa engelleri halinde borçlu temerrüdünü önleyebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 242,
+    "Title": "Ticaret sicili",
+    "Slug": "ticaret-sicili",
+    "Letter": "T",
+    "Definition": "Tacir ve şirketlere ilişkin kayıtların tutulduğu resmi sicildir. İlan ve tescille üçüncü kişilere karşı aleniyet sağlanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 243,
+    "Title": "TTK (Türk Ticaret Kanunu)",
+    "Slug": "ttk-turk-ticaret-kanunu",
+    "Letter": "T",
+    "Definition": "Ticari işletme, şirketler, kıymetli evrak ve deniz ticaretini düzenleyen temel kanundur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 244,
+    "Title": "TTK uyarınca yönetim kurulu",
+    "Slug": "ttk-uyarinca-yonetim-kurulu",
+    "Letter": "T",
+    "Definition": "Anonim şirkette yönetim ve temsil organıdır. Yetki devri, sorumluluk ve görev süresi kanunla belirlenir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 245,
+    "Title": "Tutuklama",
+    "Slug": "tutuklama",
+    "Letter": "T",
+    "Definition": "Kuvvetli suç şüphesi ve kaçma/karartma tehlikesi varsa hâkim kararıyla özgürlüğün geçici kısıtlanmasıdır. Ölçülülük esastır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 246,
+    "Title": "Tüketici hakem heyeti",
+    "Slug": "tuketici-hakem-heyeti",
+    "Letter": "T",
+    "Definition": "Belirli parasal sınırın altındaki tüketici uyuşmazlıklarını çözmekle görevli idari mercidir. Kararlarına karşı mahkemeye itiraz mümkündür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 247,
+    "Title": "Tüketici mahkemesi",
+    "Slug": "tuketici-mahkemesi",
+    "Letter": "T",
+    "Definition": "Tüketici işlemlerinden doğan davalara bakan ihtisas mahkemesidir. Zorunlu arabuluculuk şartı bazı konularda uygulanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 248,
+    "Title": "Tüketici sözleşmeleri",
+    "Slug": "tuketici-sozlesmeleri",
+    "Letter": "T",
+    "Definition": "Ticari/mesleki amaçla hareket edenlerle tüketiciler arasında kurulan sözleşmelerdir. Haksız şart yasağı ve cayma haklarıyla korunur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 249,
+    "Title": "Uyuşmazlık",
+    "Slug": "uyusmazlik",
+    "Letter": "U",
+    "Definition": "Taraflar arasında hukuki menfaat çatışması veya iddia-inkâr karşıtlığı hâlidir. Yargı mercilerinde çözüm aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 250,
+    "Title": "Uyuşmazlık Mahkemesi",
+    "Slug": "uyusmazlik-mahkemesi",
+    "Letter": "U",
+    "Definition": "Adli–idari yargı mercileri arasında görev ve hüküm uyuşmazlıklarını kesin olarak çözen yüksek mahkemedir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 251,
+    "Title": "UYAP",
+    "Slug": "uyap",
+    "Letter": "U",
+    "Definition": "Ulusal Yargı Ağı Bilişim Sistemi’dir; dava, evrak ve tebligat süreçlerinin dijital ortamda yürütülmesini sağlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 252,
+    "Title": "Uzlaştırma (ceza)",
+    "Slug": "uzlastirma-ceza",
+    "Letter": "U",
+    "Definition": "Bazı suçlarda fail ile mağdurun anlaşmasıyla uyuşmazlığın çözülmesidir. Kamu davasının açılmaması veya düşmesi sonucunu doğurabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 253,
+    "Title": "Usul ekonomisi",
+    "Slug": "usul-ekonomisi",
+    "Letter": "U",
+    "Definition": "Yargılamanın hızlı, etkin ve mümkün olan en az masrafla yürütülmesi ilkesidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 254,
+    "Title": "Usule ilişkin kazanılmış hak",
+    "Slug": "usule-iliskin-kazanilmis-hak",
+    "Letter": "U",
+    "Definition": "Bozma sonrası mahkemenin, üst mahkemenin bağladığı çerçevenin dışına çıkamaması ve tarafın elde ettiği usulî kazanımların korunmasıdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 255,
+    "Title": "Ücret alacağı",
+    "Slug": "ucret-alacagi",
+    "Letter": "Ü",
+    "Definition": "İşçinin yaptığı iş karşılığı hak ettiği ve kanunen korunan alacaktır. Zamanaşımı ve faiz hükümleri önemlidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 256,
+    "Title": "Üst hakkı (inşaat)",
+    "Slug": "ust-hakki-insaat",
+    "Letter": "Ü",
+    "Definition": "Başkasına ait arsa üzerinde yapı yapma ve kullanma yetkisi veren irtifak hakkıdır. Süreli ve devredilebilir niteliktedir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 257,
+    "Title": "Üst sınır (ceza)",
+    "Slug": "ust-sinir-ceza",
+    "Letter": "Ü",
+    "Definition": "Suça öngörülen ceza aralığının azami değeridir. Temel cezanın belirlenmesinde hâkimin takdirini sınırlar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 258,
+    "Title": "Vade",
+    "Slug": "vade",
+    "Letter": "V",
+    "Definition": "Borç ediminin yerine getirileceği zaman dilimidir. Vadenin gelmesiyle muacceliyet doğar.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 259,
+    "Title": "Velayet",
+    "Slug": "velayet",
+    "Letter": "V",
+    "Definition": "Ergin olmayan çocuğun bakım, eğitim ve temsiline ilişkin ana-babaya tanınan yetki ve yükümlülüktür.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 260,
+    "Title": "Vekâlet",
+    "Slug": "vekalet",
+    "Letter": "V",
+    "Definition": "Bir kimsenin bir başkasını temsil etme yetkisidir. Avukatın davayı takip etmesi vekâlet ilişkisine dayanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 261,
+    "Title": "Vekâlet ücreti (karşı/akdi)",
+    "Slug": "vekalet-ucreti-karsi-akdi",
+    "Letter": "V",
+    "Definition": "Avukata sözleşmeyle ödenen ücret ile karşı tarafa yükletilen yargılama gideri niteliğindeki ücreti ifade eder.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 262,
+    "Title": "Vekilin azli/istifası",
+    "Slug": "vekilin-azli-istifasi",
+    "Letter": "V",
+    "Definition": "Temsil ilişkisinin taraf iradesiyle sona erdirilmesidir. Usule uygun bildirim ve sonuçları önemlidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 263,
+    "Title": "Veraset ilamı",
+    "Slug": "veraset-ilami",
+    "Letter": "V",
+    "Definition": "Mirasçılık belgesidir; kimin mirasçı olduğunu gösterir ve işlemlerde aranır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 264,
+    "Title": "Vergi cezası",
+    "Slug": "vergi-cezasi",
+    "Letter": "V",
+    "Definition": "Vergi kanunlarına aykırı davranışlara uygulanan idari para cezalarıdır. Usulsüzlük ve vergi ziyaı cezaları başlıca türlerdir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 265,
+    "Title": "Vergi mahkemesi",
+    "Slug": "vergi-mahkemesi",
+    "Letter": "V",
+    "Definition": "Vergi ve benzeri mali yükümlülüklerden doğan uyuşmazlıklara bakan ilk derece idari yargı yeridir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 266,
+    "Title": "Vergi ziyaı",
+    "Slug": "vergi-ziyai",
+    "Letter": "V",
+    "Definition": "Verginin zamanında veya eksiksiz tahakkuk/ödeme edilmemesi hâlidir. Ziya cezası ve gecikme faizi uygulanır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 267,
+    "Title": "Vesayet",
+    "Slug": "vesayet",
+    "Letter": "V",
+    "Definition": "Kısıtlı veya küçüklerin kişilik ve malvarlığının korunması için mahkemece atanan temsil kurumudur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 268,
+    "Title": "VUK (Vergi Usul Kanunu)",
+    "Slug": "vuk-vergi-usul-kanunu",
+    "Letter": "V",
+    "Definition": "Verginin tarh, tebliğ, tahakkuk ve tahsil usullerini düzenleyen temel kanundur.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 269,
+    "Title": "Yargılama giderleri",
+    "Slug": "yargilama-giderleri",
+    "Letter": "Y",
+    "Definition": "Harç, tebligat, bilirkişi, tanık ve vekâlet ücreti gibi davanın yürütülmesinde yapılan zorunlu giderlerdir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 270,
+    "Title": "Yargı yolu",
+    "Slug": "yargi-yolu",
+    "Letter": "Y",
+    "Definition": "Uyuşmazlığın görülmesi için başvurulacak yargı koludur (adli, idari, anayasa yargısı vb.).",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 271,
+    "Title": "Yargı yetkisi",
+    "Slug": "yargi-yetkisi",
+    "Letter": "Y",
+    "Definition": "Mahkemelerin dava ve kişiler üzerinde egemenlik kullanma gücüdür. Milletlerarası yetki kuralları da bu kapsamda değerlendirilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 272,
+    "Title": "Yargılamanın yenilenmesi",
+    "Slug": "yargilamanin-yenilenmesi",
+    "Letter": "Y",
+    "Definition": "Kesinleşmiş hükme rağmen yeni delil veya ağır usul hatası gibi sebeplerle davanın yeniden görülmesidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 273,
+    "Title": "Yargıtay",
+    "Slug": "yargitay",
+    "Letter": "Y",
+    "Definition": "Adli yargı kararlarını hukuk yönünden inceleyen temyiz merciidir; içtihat birliğini sağlamaya hizmet eder.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 274,
+    "Title": "Yargıtay Cumhuriyet Başsavcılığı",
+    "Slug": "yargitay-cumhuriyet-bassavciligi",
+    "Letter": "Y",
+    "Definition": "Yargıtay nezdinde kamu davasını temsil eden ve kanun yararına bozma taleplerinde bulunan makamdır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 275,
+    "Title": "Yargıtay içtihadı birleştirme",
+    "Slug": "yargitay-ictihadi-birlestirme",
+    "Letter": "Y",
+    "Definition": "Daireler arası görüş ayrılıklarını gidermek için verilen ve bağlayıcı nitelikteki kararlardır.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 276,
+    "Title": "Yarışan suç",
+    "Slug": "yarisan-suc",
+    "Letter": "Y",
+    "Definition": "Aynı fiilin birden fazla suç tipini ihlal etmesi veya zincirleme suç gibi durumlarda gündeme gelen hukuki nitelendirmedir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 277,
+    "Title": "Yasal faiz",
+    "Slug": "yasal-faiz",
+    "Letter": "Y",
+    "Definition": "Kanunda belirlenen oran üzerinden hesaplanan faizdir. Sözleşmede aksi kararlaştırılabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 278,
+    "Title": "Yasal temsilci",
+    "Slug": "yasal-temsilci",
+    "Letter": "Y",
+    "Definition": "Küçük veya kısıtlı adına işlem yapan ana-baba veya vasi gibi kişilerdir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 279,
+    "Title": "Yatırım teşviki (idare hukuku)",
+    "Slug": "yatirim-tesviki-idare-hukuku",
+    "Letter": "Y",
+    "Definition": "Kamu otoritelerince sağlanan vergi, destek ve muafiyet mekanizmalarıdır; idari usullere tabidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 280,
+    "Title": "Yetki (yer/bakımından)",
+    "Slug": "yetki-yer-bakimindan",
+    "Letter": "Y",
+    "Definition": "Davanın hangi coğrafi yerdeki mahkemede görüleceğini belirler. Sözleşmesel yetki anlaşmalarıyla değiştirilebilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 281,
+    "Title": "Yetki sözleşmesi",
+    "Slug": "yetki-sozlesmesi",
+    "Letter": "Y",
+    "Definition": "Tarafların belirli uyuşmazlıklar için belli yer mahkemesini seçmeleridir. Kesin yetki hallerinde geçerli değildir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 282,
+    "Title": "Yüz kızartıcı suç (terimsel kullanım)",
+    "Slug": "yuz-kizartici-suc-terimsel-kullanim",
+    "Letter": "Y",
+    "Definition": "Belirli hukuk alanlarında sonuç doğuran, toplumda ağır ayıplanan suçlar için kullanılan terimdir; kapsamı kanuna göre değişir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 283,
+    "Title": "Zamanaşımı (hak düşürücü süreden farkı)",
+    "Slug": "zamanasimi-hak-dusurucu-sureden-farki",
+    "Letter": "Z",
+    "Definition": "Hakkın istenebilirliğini ortadan kaldıran süredir; ileri sürülmesi itirazdır. Hak düşürücü süre ise hakkı tamamen sona erdirir ve re’sen gözetilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 284,
+    "Title": "Zilyetlik",
+    "Slug": "zilyetlik",
+    "Letter": "Z",
+    "Definition": "Eşya üzerinde fiili hâkimiyettir. Zilyetlik korunması, hak sahibinden bağımsız olarak sağlanabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 285,
+    "Title": "Zor kullanma yetkisi",
+    "Slug": "zor-kullanma-yetkisi",
+    "Letter": "Z",
+    "Definition": "Kamu gücü kullanan görevlilerin, kanuni şartlar altında ve ölçülülük içinde kuvvet kullanabilmesidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 286,
+    "Title": "Zorunlu arabuluculuk",
+    "Slug": "zorunlu-arabuluculuk",
+    "Letter": "Z",
+    "Definition": "Bazı uyuşmazlıklarda dava açmadan önce arabulucuya başvurma zorunluluğudur; başvurulmazsa dava usulden reddedilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 287,
+    "Title": "Zorunlu müdafi",
+    "Slug": "zorunlu-mudafi",
+    "Letter": "Z",
+    "Definition": "Belirli hallerde sanığa baro tarafından atanan müdafidir; savunma hakkının güvencesidir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 288,
+    "Title": "Zorunlu sigorta",
+    "Slug": "zorunlu-sigorta",
+    "Letter": "Z",
+    "Definition": "Kanun gereği yapılması zorunlu olan sigortalardır (ör. trafik sigortası). Yaptırımı idari para cezası ve yaptırımlar olabilir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  },
+  {
+    "Id": 289,
+    "Title": "Zorlayıcı sebep (mücbir sebep)",
+    "Slug": "zorlayici-sebep-mucbir-sebep",
+    "Letter": "Z",
+    "Definition": "Öngörülemeyen ve karşı konulamayan olağanüstü olaylar nedeniyle sorumluluğu kaldıran veya hafifleten sebeptir.",
+    "CreatedAt": "2026-04-06T00:00:00Z",
+    "UpdatedAt": "2026-04-06T00:00:00Z"
+  }
+]
