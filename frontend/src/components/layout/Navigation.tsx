@@ -122,7 +122,7 @@ export default function Navigation({ transparent }: { transparent?: boolean }) {
             <Link
               to="/iletisim"
               onClick={() => setOpen(false)}
-              className="block w-full border border-navy bg-navy py-3 text-center text-xs font-medium uppercase tracking-wider text-white transition-opacity hover:opacity-85"
+              className="block w-full border border-navy bg-navy py-4 text-center text-xs font-medium uppercase tracking-wider text-white transition-opacity hover:opacity-85"
             >
               Randevu Al
             </Link>

@@ -12,7 +12,7 @@ export default function LegalServiceJsonLd() {
       addressLocality: "İstanbul",
       addressCountry: "TR",
     },
-    telephone: "+90-212-123-45-67",
+    telephone: "+90-505-400-53-80",
     email: "info@isikavukatlik.com",
     openingHoursSpecification: [
       {

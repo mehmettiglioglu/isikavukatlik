@@ -83,7 +83,7 @@ export async function adminDeleteArticle(token: string, id: number) {
 
 export async function sendContactMessage(data: {
   name: string;
-  email: string;
+  email?: string;
   phone?: string;
   subject: string;
   message: string;

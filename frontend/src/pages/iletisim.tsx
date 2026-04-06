@@ -19,9 +19,26 @@ const SUBJECTS = [
   "Diğer",
 ];
 
+const WORKING_HOURS = [
+  { day: "Pazartesi", hours: "08:30 – 18:30", open: true },
+  { day: "Salı",      hours: "08:30 – 18:30", open: true },
+  { day: "Çarşamba",  hours: "08:30 – 18:30", open: true },
+  { day: "Perşembe",  hours: "08:30 – 18:30", open: true },
+  { day: "Cuma",      hours: "08:30 – 18:30", open: true },
+  { day: "Cumartesi", hours: "09:30 – 17:00", open: true },
+  { day: "Pazar",     hours: "Kapalı",         open: false },
+];
+
+function getTodayIndex() {
+  // JS: 0=Pazar … 6=Cmt → bizim dizimiz: 0=Pzt … 5=Cmt, 6=Pazar
+  const d = new Date().getDay();
+  return d === 0 ? 6 : d - 1;
+}
+
 export default function IletisimPage() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
   const [state, setState] = useState<FormState>("idle");
+  const todayIdx = getTodayIndex();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
@@ -37,13 +54,6 @@ export default function IletisimPage() {
       setState("error");
     }
   };
-
-  const contactItems = [
-    { icon: MapPin, label: "Adres", value: "Konya, Türkiye", detail: "Detaylı adres için arayınız" },
-    { icon: Phone, label: "Telefon", value: "+90 545 216 24 66", href: "tel:+905452162466" },
-    { icon: Mail, label: "E-posta", value: "info@isikavukatlik.com", href: "mailto:info@isikavukatlik.com" },
-    { icon: Clock, label: "Çalışma Saatleri", value: "Pazartesi – Cuma", detail: "09:00 – 18:00" },
-  ];
 
   return (
     <main>
@@ -65,7 +75,7 @@ export default function IletisimPage() {
               <span className="h-px w-6 bg-gold" aria-hidden="true" />
               Ulaşın
             </p>
-            <h1 className="font-serif text-5xl font-light text-white">İletişim</h1>
+            <h1 className="font-serif text-3xl font-light text-white sm:text-5xl">İletişim</h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-gray-300">
               Hukuki danışmanlık ve randevu talepleriniz için bizimle iletişime geçebilirsiniz.
             </p>
@@ -73,39 +83,74 @@ export default function IletisimPage() {
         </div>
       </section>
 
+      {/* Harita */}
+      <section className="pt-16 pb-0">
+        <div className="mx-auto max-w-5xl px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="mb-5 flex items-center gap-3">
+              <MapPin size={16} className="text-gold" />
+              <h2 className="font-serif text-xl font-light text-navy">Ofis Konumumuz</h2>
+            </div>
+            <div className="overflow-hidden border border-gray-100 shadow-sm" style={{ height: 440 }}>
+              <iframe
+                title="Işık Hukuk Bürosu Konum"
+                src="https://maps.google.com/maps?q=37.8760028,32.4812171&hl=tr&z=17&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: "block" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <a
+              href="https://maps.app.goo.gl/5UG7g8sqKj8HcdD58"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.14em] text-gold transition-opacity hover:opacity-70"
+            >
+              <MapPin size={12} />
+              Google Maps'te Aç
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Form + Bilgi */}
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <div className="grid gap-14 lg:grid-cols-[1fr_380px]">
+          <div className="grid gap-10 lg:gap-14 lg:grid-cols-[1fr_380px]">
 
-            {/* Sol: Form + Ara butonu */}
+            {/* Sol: Hemen Ara + Form */}
             <div>
-              {/* Hemen Ara */}
               <motion.a
-                href="tel:+905452162466"
+                href="tel:+905054005380"
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="group mb-8 flex items-center gap-5 border border-gold/30 bg-navy px-6 py-5 transition-opacity hover:opacity-90"
+                className="group mb-8 flex items-center gap-3 sm:gap-5 border border-gold/30 bg-navy px-4 py-4 sm:px-6 sm:py-5 transition-opacity hover:opacity-90"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-gold/15">
                   <Phone size={22} className="text-gold" />
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">Hemen Ara</p>
-                  <p className="mt-0.5 font-serif text-xl font-light text-white">+90 545 216 24 66</p>
-                  <p className="text-xs text-gray-400">Pzt – Cum 09:00 – 18:00</p>
+                  <p className="mt-0.5 font-serif text-lg font-light text-white sm:text-xl">+90 505 400 53 80</p>
+                  <p className="text-[10px] text-gray-400 sm:text-xs">Pzt – Cum 08:30 – 18:30 · Cmt 09:30 – 17:00</p>
                 </div>
                 <Phone size={18} className="ml-auto shrink-0 text-gold/40 transition-transform group-hover:scale-110" />
               </motion.a>
 
-              {/* Ayırıcı */}
               <div className="mb-8 flex items-center gap-4">
                 <div className="h-px flex-1 bg-gray-100" />
                 <p className="text-xs uppercase tracking-[0.18em] text-gray-400">veya mesaj bırakın</p>
                 <div className="h-px flex-1 bg-gray-100" />
               </div>
 
-              {/* Form */}
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.15 }}>
                 {state === "success" ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -148,30 +193,89 @@ export default function IletisimPage() {
               </motion.div>
             </div>
 
-            {/* Sağ: İletişim kartları */}
+            {/* Sağ: İletişim kartları + Çalışma Saatleri */}
             <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-4">
               <motion.h2 variants={fadeUp} className="mb-6 font-serif text-2xl font-light text-navy">Bize Ulaşın</motion.h2>
-              {contactItems.map(({ icon: Icon, label, value, detail, href }) => (
-                <motion.div key={label} variants={fadeUp} className="flex items-start gap-4 border border-gray-100 bg-white p-5 transition-colors hover:border-gold/30">
+
+              {/* Adres */}
+              <motion.div variants={fadeUp} className="flex items-start gap-4 border border-gray-100 bg-white p-5 transition-colors hover:border-gold/30">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#f8f7f4]">
+                  <MapPin size={17} className="text-gold" />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-gray-400">Adres</p>
+                  <p className="mt-1 font-medium text-navy">Konya, Türkiye</p>
+                  <p className="mt-0.5 text-sm text-gray-500">Detaylı adres için arayınız</p>
+                </div>
+              </motion.div>
+
+              {/* Telefon */}
+              <motion.div variants={fadeUp} className="flex items-start gap-4 border border-gray-100 bg-white p-5 transition-colors hover:border-gold/30">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#f8f7f4]">
+                  <Phone size={17} className="text-gold" />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-gray-400">Telefon</p>
+                  <a href="tel:+905054005380" className="mt-1 block font-medium text-navy transition-colors hover:text-gold">
+                    +90 505 400 53 80
+                  </a>
+                </div>
+              </motion.div>
+
+              {/* E-posta */}
+              <motion.div variants={fadeUp} className="flex items-start gap-4 border border-gray-100 bg-white p-5 transition-colors hover:border-gold/30">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#f8f7f4]">
+                  <Mail size={17} className="text-gold" />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-gray-400">E-posta</p>
+                  <a href="mailto:info@isikavukatlik.com" className="mt-1 block font-medium text-navy transition-colors hover:text-gold">
+                    info@isikavukatlik.com
+                  </a>
+                </div>
+              </motion.div>
+
+              {/* Çalışma Saatleri */}
+              <motion.div variants={fadeUp} className="border border-gray-100 bg-white p-5 transition-colors hover:border-gold/30">
+                <div className="mb-4 flex items-center gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-[#f8f7f4]">
-                    <Icon size={17} className="text-gold" />
+                    <Clock size={17} className="text-gold" />
                   </div>
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-gray-400">{label}</p>
-                    {href ? (
-                      <a href={href} className="mt-1 block font-medium text-navy transition-colors hover:text-gold">{value}</a>
-                    ) : (
-                      <p className="mt-1 font-medium text-navy">{value}</p>
-                    )}
-                    {detail && <p className="mt-0.5 text-sm text-gray-500">{detail}</p>}
-                  </div>
-                </motion.div>
-              ))}
+                  <p className="text-[10px] uppercase tracking-widest text-gray-400">Çalışma Saatleri</p>
+                </div>
+                <ul className="space-y-1">
+                  {WORKING_HOURS.map(({ day, hours, open }, i) => (
+                    <li
+                      key={day}
+                      className={clsx(
+                        "flex items-center justify-between px-3 py-2 text-sm transition-colors",
+                        i === todayIdx
+                          ? "bg-navy"
+                          : "hover:bg-[#f8f7f4]"
+                      )}
+                    >
+                      <span className={clsx("font-medium", i === todayIdx ? "text-white" : "text-navy")}>
+                        {day}
+                        {i === todayIdx && (
+                          <span className="ml-2 text-[10px] font-normal uppercase tracking-wider text-gold">bugün</span>
+                        )}
+                      </span>
+                      <span className={clsx(
+                        "tabular-nums text-xs",
+                        i === todayIdx ? "text-gray-300" : open ? "text-gray-500" : "font-medium text-red-400"
+                      )}>
+                        {hours}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             </motion.div>
 
           </div>
         </div>
       </section>
+
     </main>
   );
 }

@@ -251,7 +251,6 @@ function InlineContactForm({
         name: form.name.trim(),
         phone: form.phone.trim(),
         subject: context,
-        email: "",
         message: form.message.trim(),
       });
       setStatus("success");
@@ -430,6 +429,13 @@ export default function IsikAsistan() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const hasInitialized = useRef(false);
 
+  // Sayfa yüklendikten 3-4 sn sonra otomatik aç
+  useEffect(() => {
+    const delay = 3000 + Math.random() * 1000;
+    const timer = setTimeout(() => setOpen(true), delay);
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToBottom = useCallback(() => {
     requestAnimationFrame(() => {
       scrollRef.current?.scrollTo({
@@ -606,8 +612,8 @@ export default function IsikAsistan() {
                                   {(msg.node.action === "contact" ||
                                     msg.node.action === "call") && (
                                       <a
-                                        href="tel:+905452162466"
-                                        className="inline-flex items-center gap-1.5 bg-navy px-3 py-2 text-[11px] font-medium uppercase tracking-[0.12em] text-white transition-colors hover:bg-navy-light"
+                                        href="tel:+905054005380"
+                                        className="inline-flex min-h-[44px] items-center gap-1.5 bg-navy px-3 py-2.5 text-[11px] font-medium uppercase tracking-[0.12em] text-white transition-colors hover:bg-navy-light"
                                       >
                                         <Phone size={12} />
                                         Hemen Ara
@@ -617,7 +623,7 @@ export default function IsikAsistan() {
                                     <button
                                       type="button"
                                       onClick={() => setShowForm(true)}
-                                      className="inline-flex items-center gap-1.5 border border-navy px-3 py-2 text-[11px] font-medium uppercase tracking-[0.12em] text-navy transition-colors hover:bg-navy hover:text-white"
+                                      className="inline-flex min-h-[44px] items-center gap-1.5 border border-navy px-3 py-2.5 text-[11px] font-medium uppercase tracking-[0.12em] text-navy transition-colors hover:bg-navy hover:text-white"
                                     >
                                       <Send size={12} />
                                       Mesaj Gonder
@@ -660,7 +666,7 @@ export default function IsikAsistan() {
                                     onClick={() =>
                                       handleOptionClick(opt.label, opt.nextId)
                                     }
-                                    className="group flex w-full items-center gap-2 border border-gray-200 bg-white px-3.5 py-2.5 text-left text-[13px] text-navy transition-all hover:border-gold/50 hover:bg-[#faf9f7]"
+                                    className="group flex min-h-[44px] w-full items-center gap-2 border border-gray-200 bg-white px-3.5 py-3 text-left text-[13px] text-navy transition-all hover:border-gold/50 hover:bg-[#faf9f7]"
                                   >
                                     <span className="flex-1">{opt.label}</span>
                                     <ChevronRight

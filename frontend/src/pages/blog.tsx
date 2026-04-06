@@ -69,7 +69,7 @@ export default function BlogPage() {
             </nav>
           )}
 
-          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" role="list">
+          <ul className="grid gap-5 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3" role="list">
             {articles.map((article) => (
               <li key={article.id}><ArticleCard article={article} /></li>
             ))}

@@ -33,7 +33,8 @@ public class UploadController : ControllerBase
         if (!AllowedExtensions.Contains(ext))
             return BadRequest(new { error = "Desteklenmeyen dosya türü. JPG, PNG, GIF veya WebP yükleyin." });
 
-        var uploadsDir = Path.Combine(_env.WebRootPath, "uploads");
+        var uploadsDir = _config["UploadsPath"]
+            ?? Path.Combine(_env.ContentRootPath, "uploads");
         Directory.CreateDirectory(uploadsDir);
 
         var fileName = $"{Guid.NewGuid()}{ext}";
