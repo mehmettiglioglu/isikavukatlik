@@ -24,6 +24,9 @@ backend/*/obj/
 backend/IsikAvukatlik.API/wwwroot/uploads/
 uploads/
 
+# Publish output
+publish/
+
 # OS
 .DS_Store
 Thumbs.db

@@ -49,7 +49,9 @@ builder.Services.AddCors(options =>
             .WithOrigins(
                 builder.Configuration["AllowedOrigins:Dev"] ?? "http://localhost:3000",
                 "http://localhost:3001",
-                builder.Configuration["AllowedOrigins:Prod"] ?? "https://isikavukatlik.com"
+                builder.Configuration["AllowedOrigins:Prod"] ?? "https://isikavukatlik.com",
+                "https://isikavukatlik.tr",
+                "http://isikavukatlik.tr"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
