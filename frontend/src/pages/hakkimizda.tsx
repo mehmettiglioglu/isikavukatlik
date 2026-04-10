@@ -31,8 +31,8 @@ export default function HakkimizdaPage() {
   return (
     <main>
       <PageHead
-        title="Hakkımızda"
-        description="Konya'da faaliyet gösteren Işık Hukuk Bürosu hakkında bilgi edinin."
+        title="Hakkımızda | Konya Avukat — Işık Hukuk Bürosu"
+        description="Konya'da faaliyet gösteren Işık Hukuk Bürosu hakkında. Deneyimli avukat kadromuz, çalışma prensiplerimiz ve hukuki danışmanlık yaklaşımımız."
         canonical="/hakkimizda"
       />
       {/* Hero */}

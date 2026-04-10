@@ -58,8 +58,8 @@ export default function IletisimPage() {
   return (
     <main>
       <PageHead
-        title="İletişim — Hukuki Danışmanlık ve Randevu"
-        description="Hukuki danışmanlık ve randevu talepleriniz için bizimle iletişime geçin. Ücretsiz ön görüşme için hemen arayın veya form doldurun."
+        title="İletişim | Konya Avukat Randevu — Işık Hukuk Bürosu"
+        description="Konya'da avukat mı arıyorsunuz? Işık Hukuk Bürosu'na hemen ulaşın. Ücretsiz ön görüşme için arayın veya mesaj bırakın. ☎ 0505 400 53 80"
         canonical="/iletisim"
       />
 

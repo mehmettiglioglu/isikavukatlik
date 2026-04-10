@@ -36,7 +36,7 @@ export default function BlogPage() {
 
   return (
     <main>
-      <PageHead title="Hukuki Yazılar ve Makaleler" description="Ceza, aile, ticaret ve iş hukuku başta olmak üzere çeşitli hukuk dallarında bilgilendirici makaleler." canonical="/blog" />
+      <PageHead title="Hukuki Makaleler | Konya Avukat Yazıları" description="Konya Işık Hukuk Bürosu avukatlarından iş, aile, ceza, ticaret hukuku ve daha fazlasında bilgilendirici hukuki makaleler ve güncel yazılar." canonical="/blog" />
       <section className="relative overflow-hidden bg-navy py-20">
         <div className="absolute inset-0 z-0">
           <img src="/justice5.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" loading="eager" />

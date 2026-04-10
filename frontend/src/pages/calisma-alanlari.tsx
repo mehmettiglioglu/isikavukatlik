@@ -9,7 +9,7 @@ import PageHead from "@/components/seo/PageHead";
 export default function CalismaAlanlariPage() {
   return (
     <main>
-      <PageHead title="Çalışma Alanları" description="Büromuz, hukukun farklı dallarında uzmanlaşmış kadrosuyla müvekkillerimize kapsamlı danışmanlık ve temsil hizmeti sunmaktadır." canonical="/calisma-alanlari" />
+      <PageHead title="Çalışma Alanları | Konya Hukuk Bürosu" description="Konya'da iş hukuku, aile hukuku, ceza hukuku, ticaret hukuku, icra hukuku ve daha fazlasında uzman avukatlık hizmeti. 14 farklı hukuk alanında danışmanlık." canonical="/calisma-alanlari" />
       <section className="relative overflow-hidden bg-navy py-20">
         <div className="absolute inset-0 z-0">
           <img src="/justice3.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-20" loading="eager" />

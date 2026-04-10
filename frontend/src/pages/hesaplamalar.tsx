@@ -18,8 +18,8 @@ export default function HesaplamalarPage() {
   return (
     <main>
       <PageHead
-        title="Hukuki Hesaplamalar — Ücretsiz Online Araçlar"
-        description="Kıdem tazminatı, ihbar, nafaka, miras, icra masrafı, gecikme faizi ve daha fazlası için ücretsiz tahmini hukuki hesaplama araçları."
+        title="Hukuki Hesaplama Araçları | Konya Avukat — Işık Hukuk"
+        description="Kıdem tazminatı, ihbar tazminatı, nafaka, miras paylaşımı, icra masrafı, gecikme faizi hesaplama. Konya Işık Hukuk Bürosu ücretsiz online hesaplama araçları."
         canonical="/hesaplamalar"
       />
 

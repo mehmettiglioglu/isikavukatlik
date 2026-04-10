@@ -24,8 +24,8 @@ export default function HomePage() {
   return (
     <>
       <PageHead
-        title="Işık Hukuk Bürosu | Hukuki Danışmanlık ve Avukatlık Hizmetleri"
-        description="Konya merkezli Işık Hukuk Bürosu; iş, kira, icra, aile ve ticaret hukuku başta olmak üzere 14 farklı hukuk alanında profesyonel avukatlık hizmeti sunmaktadır."
+        title="Konya Avukat | Işık Hukuk Bürosu | Avukatlık & Danışmanlık"
+        description="Konya avukat arıyorsanız doğru adrestesiniz. Işık Hukuk Bürosu; iş hukuku, boşanma, ceza, icra, ticaret ve gayrimenkul hukuku başta olmak üzere 14 alanda Konya'da profesyonel avukatlık hizmeti sunar."
         canonical="/"
       />
       <LegalServiceJsonLd />

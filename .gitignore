@@ -26,6 +26,7 @@ uploads/
 
 # Publish output
 publish/
+publish.zip
 
 # OS
 .DS_Store

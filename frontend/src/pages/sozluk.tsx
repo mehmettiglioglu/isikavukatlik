@@ -53,8 +53,8 @@ export default function SozlukPage() {
   return (
     <main>
       <PageHead
-        title="Hukuki Terimler Sözlüğü — Hukuk Terimleri ve Tanımları"
-        description="Türk hukukunda kullanılan hukuki terimlerin tanımları, açıklamaları ve ilgili dava bilgileri. Alfabetik hukuk sözlüğü."
+        title="Hukuki Terimler Sözlüğü | Konya Avukat — Işık Hukuk"
+        description="Türk hukukunda kullanılan 290+ hukuki terimin tanımları ve açıklamaları. Konya Işık Hukuk Bürosu hukuk sözlüğü."
         canonical="/sozluk"
         og={{ type: "website" }}
       />
